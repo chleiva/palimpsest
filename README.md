@@ -4,7 +4,7 @@
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23127764-blue)](https://doi.org/10.5281/zenodo.23127764)
 [![Paper](https://img.shields.io/badge/paper-PDF-b31b1b)](paper/main.pdf)
-[![CI](https://github.com/OWNER/palimpsest/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/palimpsest/actions/workflows/ci.yml)
+[![CI](https://github.com/chleiva/palimpsest/actions/workflows/ci.yml/badge.svg)](https://github.com/chleiva/palimpsest/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/paper%20%26%20data-CC%20BY%204.0-lightgrey)](LICENSE-CC-BY-4.0)
 ![Python](https://img.shields.io/badge/python-3.11%2B-informational)
@@ -57,7 +57,7 @@ Total measured LLM spend for the whole study: **$88.85** (ledger included).
 ## Quick start
 
 ```bash
-git clone https://github.com/OWNER/palimpsest && cd palimpsest
+git clone https://github.com/chleiva/palimpsest && cd palimpsest
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt          # pytest, jsonschema, matplotlib; everything else is the standard library
 python -m pytest tests -q                # 24 tests: semantics gate, scorer, store, oracle agreement

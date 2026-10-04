@@ -10,7 +10,7 @@ version: "1.0"
 date-released: "2026-10-03"
 doi: "10.5281/zenodo.23127764"
 license: MIT
-repository-code: "https://github.com/OWNER/palimpsest"
+repository-code: "https://github.com/chleiva/palimpsest"
 keywords:
   - belief revision
   - truth maintenance
