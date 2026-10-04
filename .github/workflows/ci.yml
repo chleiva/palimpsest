@@ -1,0 +1,22 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python-version }}" }
+      - run: pip install -r requirements.txt
+      - run: python -m pytest tests -q
+      - name: Structured smoke test (no API key)
+        run: |
+          python scripts/generate_streams.py 20 /tmp/s1 --seed0 90000
+          python scripts/run_setting1.py /tmp/s1 --out /tmp/s1.json
+      - name: Tables regenerate from committed result files
+        run: python scripts/make_tables.py && git diff --exit-code -- paper/tables/numbers.tex
+      - name: Oracle validation (bounded; writes a scratch copy of the result file)
+        run: python scripts/oracle_validation.py --n 10 --max-obs 12 && git checkout -- data/oracle_validation.json

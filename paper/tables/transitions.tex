@@ -1,0 +1,24 @@
+\begin{table}[t]\centering\small
+\caption{Answer transitions on the non-warranted event pairs of Setting 2 (frozen gold unchanged between $\tau-1$ and $\tau$; micro rates over pairs). C = exact match with gold, W = not. Instability is the registered ``unsupported propagation'' metric (answer changed while gold did not); harm is C$\to$W.}\label{tab:trans}
+\begin{tabular}{lrcccc c}
+\toprule
+System & $n$ & C$\to$C & C$\to$W & W$\to$C & W$\to$W & instability \\
+\midrule
+\textsc{Palimpsest} & 587 & 0.850 & 0.063 & 0.012 & 0.075 & 0.092 \\
+\quad no propagation & 587 & 0.819 & 0.061 & 0.034 & 0.085 & 0.107 \\
+\quad forced commit & 587 & 0.424 & 0.003 & 0.003 & 0.569 & 0.107 \\
+Symbolic replay (rule adjudicator) & 587 & 0.850 & 0.063 & 0.012 & 0.075 & 0.092 \\
+Claims log + LLM adjudicator & 587 & 0.206 & 0.080 & 0.032 & 0.681 & 0.404 \\
+\quad top-40 entries (original, 30 str.) & 172 & 0.221 & 0.134 & 0.041 & 0.605 & 0.529 \\
+Raw-report log + LLM adjudicator (30 str.) & 172 & 0.186 & 0.064 & 0.041 & 0.709 & 0.453 \\
+Claims log + LLM adj.\ (amended contract, 30 str.) & 172 & 0.203 & 0.110 & 0.029 & 0.657 & 0.448 \\
+\quad top-10 entries & 172 & 0.331 & 0.076 & 0.047 & 0.547 & 0.314 \\
+\quad top-20 entries & 172 & 0.250 & 0.099 & 0.070 & 0.581 & 0.483 \\
+\quad top-40 entries & 172 & 0.227 & 0.110 & 0.041 & 0.622 & 0.483 \\
+Raw-report log + LLM adj.\ (amended, 30 str.) & 172 & 0.180 & 0.052 & 0.070 & 0.698 & 0.471 \\
+Temporal DB & 587 & 0.417 & 0.003 & 0.003 & 0.576 & 0.150 \\
+Always abstain & 587 & 0.124 & 0.017 & 0.000 & 0.859 & 0.121 \\
+Always commit & 587 & 0.252 & 0.012 & 0.009 & 0.727 & 0.211 \\
+\bottomrule
+\end{tabular}
+\end{table}

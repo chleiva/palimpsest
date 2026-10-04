@@ -1,0 +1,196 @@
+{
+ "setting3": {
+  "est_total": 338,
+  "est_empty": 94,
+  "holds_false": 102,
+  "warr_total": 24,
+  "warr_empty": 3,
+  "palimpsest": {
+   "res": [
+    0.978,
+    30
+   ],
+   "res_ne": [
+    0.954,
+    29
+   ],
+   "warr": [
+    0.923,
+    13
+   ],
+   "warr_ne": [
+    0.923,
+    13
+   ]
+  },
+  "log_llm_adjudicator": {
+   "res": [
+    0.185,
+    30
+   ],
+   "res_ne": [
+    0.518,
+    29
+   ],
+   "warr": [
+    0.019,
+    13
+   ],
+   "warr_ne": [
+    0.077,
+    13
+   ]
+  },
+  "temporal_db": {
+   "res": [
+    0.692,
+    30
+   ],
+   "res_ne": [
+    0.954,
+    29
+   ],
+   "warr": [
+    0.865,
+    13
+   ],
+   "warr_ne": [
+    0.923,
+    13
+   ]
+  },
+  "log_rule_adjudicator": {
+   "res": [
+    0.978,
+    30
+   ],
+   "res_ne": [
+    0.954,
+    29
+   ],
+   "warr": [
+    0.923,
+    13
+   ],
+   "warr_ne": [
+    0.923,
+    13
+   ]
+  },
+  "log_llm_adjudicator_c2": {
+   "res": [
+    0.205,
+    30
+   ],
+   "res_ne": [
+    0.515,
+    29
+   ],
+   "warr": [
+    0.019,
+    13
+   ],
+   "warr_ne": [
+    0.077,
+    13
+   ]
+  }
+ },
+ "setting2_100": {
+  "est_total": 2598,
+  "est_empty": 44,
+  "holds_false": 92,
+  "warr_total": 741,
+  "warr_empty": 21,
+  "palimpsest": {
+   "warr": [
+    0.956,
+    99
+   ],
+   "warr_ne": [
+    0.955,
+    98
+   ],
+   "res": [
+    0.976,
+    100
+   ],
+   "res_ne": [
+    0.974,
+    100
+   ]
+  },
+  "log_llm_adjudicator": {
+   "warr": [
+    0.514,
+    99
+   ],
+   "warr_ne": [
+    0.531,
+    98
+   ],
+   "res": [
+    0.666,
+    100
+   ],
+   "res_ne": [
+    0.685,
+    100
+   ]
+  },
+  "temporal_db": {
+   "warr": [
+    0.779,
+    99
+   ],
+   "warr_ne": [
+    0.807,
+    98
+   ],
+   "res": [
+    0.895,
+    100
+   ],
+   "res_ne": [
+    0.907,
+    100
+   ]
+  },
+  "log_rule_adjudicator": {
+   "warr": [
+    0.956,
+    99
+   ],
+   "warr_ne": [
+    0.955,
+    98
+   ],
+   "res": [
+    0.976,
+    100
+   ],
+   "res_ne": [
+    0.974,
+    100
+   ]
+  },
+  "log_llm_adjudicator_c2": {
+   "warr": [
+    0.4,
+    30
+   ],
+   "warr_ne": [
+    0.393,
+    29
+   ],
+   "res": [
+    0.607,
+    30
+   ],
+   "res_ne": [
+    0.627,
+    30
+   ]
+  }
+ }
+}

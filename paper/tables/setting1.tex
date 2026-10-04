@@ -1,0 +1,16 @@
+\begin{sidewaystable}\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\caption{Setting 1 (structured streams, gold dependencies, no LLM; 500 streams). Stream-level means with 95\% cluster-bootstrap intervals.}\label{tab:s1}
+\begin{tabular}{lcccccccc}
+\toprule
+System & Warr.\ downstream & Warr.\ direct & Resolvable & Unresolved & Commit rate$\downarrow$ & Unsupp.\ prop.$\downarrow$ & Prov.\ P & Prov.\ R \\
+\midrule
+\textsc{Palimpsest} & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 0.000 {\tiny[0.00,0.00]} & 0.000 {\tiny[0.00,0.00]} & 0.990 {\tiny[0.99,0.99]} & 0.993 {\tiny[0.99,0.99]} \\
+\quad no propagation & 0.794 {\tiny[0.78,0.81]} & 1.000 {\tiny[1.00,1.00]} & 0.933 {\tiny[0.93,0.94]} & 0.962 {\tiny[0.96,0.97]} & 0.002 {\tiny[0.00,0.00]} & 0.017 {\tiny[0.01,0.02]} & 0.981 {\tiny[0.98,0.98]} & 0.989 {\tiny[0.99,0.99]} \\
+\quad forced commit & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 0.042 {\tiny[0.04,0.05]} & 0.776 {\tiny[0.76,0.79]} & 0.090 {\tiny[0.08,0.10]} & 0.992 {\tiny[0.99,0.99]} & 0.775 {\tiny[0.77,0.78]} \\
+Log + rule adjudicator & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} & 0.000 {\tiny[0.00,0.00]} & 0.000 {\tiny[0.00,0.00]} & 1.000 {\tiny[1.00,1.00]} & 1.000 {\tiny[1.00,1.00]} \\
+Temporal DB & 0.807 {\tiny[0.79,0.82]} & 0.909 {\tiny[0.89,0.92]} & 0.907 {\tiny[0.90,0.91]} & 0.000 {\tiny[0.00,0.00]} & 0.848 {\tiny[0.84,0.86]} & 0.105 {\tiny[0.09,0.12]} & 0.950 {\tiny[0.95,0.95]} & 0.341 {\tiny[0.33,0.35]} \\
+Always abstain & 0.000 {\tiny[0.00,0.00]} & 0.000 {\tiny[0.00,0.00]} & 0.000 {\tiny[0.00,0.00]} & 0.393 {\tiny[0.38,0.41]} & 0.000 {\tiny[0.00,0.00]} & 0.075 {\tiny[0.06,0.09]} & 0.507 {\tiny[0.50,0.51]} & 0.739 {\tiny[0.73,0.75]} \\
+Always commit & 0.438 {\tiny[0.42,0.46]} & 0.970 {\tiny[0.96,0.98]} & 0.770 {\tiny[0.76,0.78]} & 0.000 {\tiny[0.00,0.00]} & 0.793 {\tiny[0.78,0.81]} & 0.157 {\tiny[0.14,0.17]} & 0.939 {\tiny[0.93,0.94]} & 0.284 {\tiny[0.28,0.29]} \\
+\bottomrule
+\end{tabular}
+\end{sidewaystable}

@@ -1,0 +1,17 @@
+\begin{table}[t]\centering\small
+\caption{RQ3, Setting 1 (held-out streams): claim-level calibration of support against the hidden world. Lower is better.}\label{tab:rq3}
+\begin{tabular}{lccc}
+\toprule
+Confidence & Brier & ECE & AURC \\
+\midrule
+Evidence model, declared priors & 0.182 & 0.118 & 0.138 \\
+Evidence model, learned class priors & 0.175 & 0.113 & 0.131 \\
+\quad without origin grouping & 0.179 & 0.121 & 0.136 \\
+\quad without recency & 0.236 & 0.202 & 0.156 \\
+\quad without cue adjustments & 0.183 & 0.128 & 0.136 \\
+Class prior only & 0.255 & 0.227 & 0.168 \\
+Logistic regression on evidence features & 0.138 & 0.034 & 0.112 \\
+Constant 0.5 & 0.250 & 0.496 & 0.268 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,24 @@
+\begin{sidewaystable}\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\caption{Setting 2 (natural-language streams, automatic extraction with Claude Haiku 4.5; 100 streams, 99 with a warranted downstream query). Stream-level means with 95\% cluster-bootstrap intervals; cost is measured tokens (input $+8\times$ output) per stream.}\label{tab:s2}
+\begin{tabular}{lccccccc}
+\toprule
+System & Warr.\ downstream & Warr.\ direct & Resolvable & Unresolved & Commit rate$\downarrow$ & Prov.\ P & Cost (tok/stream) \\
+\midrule
+\textsc{Palimpsest} & 0.956 {\tiny[0.93,0.98]} & 0.996 {\tiny[0.99,1.00]} & 0.976 {\tiny[0.97,0.98]} & 0.834 {\tiny[0.80,0.87]} & 0.080 {\tiny[0.06,0.10]} & 0.978 {\tiny[0.97,0.98]} & 188k \\
+\quad no propagation & 0.749 {\tiny[0.70,0.79]} & 0.996 {\tiny[0.99,1.00]} & 0.920 {\tiny[0.91,0.93]} & 0.813 {\tiny[0.78,0.85]} & 0.079 {\tiny[0.06,0.10]} & 0.972 {\tiny[0.97,0.98]} & 188k \\
+\quad forced commit & 0.979 {\tiny[0.96,0.99]} & 0.996 {\tiny[0.99,1.00]} & 0.987 {\tiny[0.98,0.99]} & 0.045 {\tiny[0.03,0.06]} & 0.758 {\tiny[0.73,0.79]} & 0.985 {\tiny[0.98,0.99]} & 188k \\
+Symbolic replay (rule adjudicator) & 0.956 {\tiny[0.93,0.98]} & 0.996 {\tiny[0.99,1.00]} & 0.976 {\tiny[0.97,0.98]} & 0.834 {\tiny[0.80,0.87]} & 0.080 {\tiny[0.06,0.10]} & 0.989 {\tiny[0.99,0.99]} & 188k \\
+Claims log + LLM adjudicator & 0.514 {\tiny[0.46,0.56]} & 0.731 {\tiny[0.69,0.77]} & 0.666 {\tiny[0.64,0.69]} & 0.128 {\tiny[0.11,0.15]} & 0.572 {\tiny[0.53,0.61]} & 0.747 {\tiny[0.73,0.76]} & 532k \\
+\quad top-40 entries (original, 30 str.) & 0.419 {\tiny[0.32,0.52]} & 0.731 {\tiny[0.64,0.81]} & 0.614 {\tiny[0.57,0.66]} & 0.103 {\tiny[0.08,0.13]} & 0.504 {\tiny[0.46,0.54]} & 0.758 {\tiny[0.73,0.78]} & 454k \\
+Raw-report log + LLM adjudicator (30 str.) & 0.330 {\tiny[0.24,0.43]} & 0.685 {\tiny[0.59,0.78]} & 0.554 {\tiny[0.51,0.60]} & 0.101 {\tiny[0.07,0.13]} & 0.606 {\tiny[0.55,0.66]} & 0.683 {\tiny[0.66,0.71]} & 439k \\
+Claims log + LLM adj.\ (amended contract, 30 str.) & 0.400 {\tiny[0.33,0.47]} & 0.703 {\tiny[0.60,0.80]} & 0.607 {\tiny[0.57,0.65]} & 0.134 {\tiny[0.09,0.18]} & 0.533 {\tiny[0.47,0.59]} & 0.714 {\tiny[0.69,0.74]} & 552k \\
+\quad top-10 entries & 0.225 {\tiny[0.16,0.29]} & 0.787 {\tiny[0.71,0.86]} & 0.572 {\tiny[0.53,0.62]} & 0.138 {\tiny[0.10,0.17]} & 0.377 {\tiny[0.33,0.43]} & 0.836 {\tiny[0.82,0.85]} & 399k \\
+\quad top-20 entries & 0.385 {\tiny[0.30,0.48]} & 0.723 {\tiny[0.63,0.81]} & 0.610 {\tiny[0.57,0.65]} & 0.136 {\tiny[0.10,0.18]} & 0.412 {\tiny[0.36,0.46]} & 0.786 {\tiny[0.77,0.80]} & 424k \\
+\quad top-40 entries & 0.429 {\tiny[0.33,0.53]} & 0.739 {\tiny[0.65,0.82]} & 0.628 {\tiny[0.59,0.67]} & 0.133 {\tiny[0.10,0.17]} & 0.471 {\tiny[0.42,0.52]} & 0.748 {\tiny[0.73,0.77]} & 464k \\
+Raw-report log + LLM adj.\ (amended, 30 str.) & 0.323 {\tiny[0.23,0.42]} & 0.672 {\tiny[0.59,0.76]} & 0.524 {\tiny[0.48,0.57]} & 0.102 {\tiny[0.07,0.14]} & 0.563 {\tiny[0.51,0.61]} & 0.674 {\tiny[0.65,0.70]} & 448k \\
+Temporal DB & 0.779 {\tiny[0.74,0.82]} & 0.885 {\tiny[0.85,0.92]} & 0.895 {\tiny[0.88,0.91]} & 0.000 {\tiny[0.00,0.00]} & 0.837 {\tiny[0.81,0.87]} & 0.961 {\tiny[0.95,0.97]} & 188k \\
+Always abstain & 0.000 {\tiny[0.00,0.00]} & 0.000 {\tiny[0.00,0.00]} & 0.000 {\tiny[0.00,0.00]} & 0.380 {\tiny[0.35,0.41]} & 0.000 {\tiny[0.00,0.00]} & 0.542 {\tiny[0.52,0.56]} & 188k \\
+Always commit & 0.422 {\tiny[0.38,0.46]} & 0.982 {\tiny[0.97,0.99]} & 0.791 {\tiny[0.77,0.81]} & 0.000 {\tiny[0.00,0.00]} & 0.795 {\tiny[0.77,0.82]} & 0.947 {\tiny[0.94,0.96]} & 188k \\
+\bottomrule
+\end{tabular}
+\end{sidewaystable}

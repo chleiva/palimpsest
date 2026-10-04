@@ -1,0 +1,639 @@
+{
+ "self_update": {
+  "n": 50,
+  "n_streams": 45,
+  "gold_status": {
+   "established": 40,
+   "unresolved": 10
+  },
+  "gold_matches_world": 0.78,
+  "always_commit": {
+   "world_acc": 0.92,
+   "world_acc_ci": [
+    0.822,
+    0.978
+   ],
+   "exact": 0.8,
+   "abstain": 0.0,
+   "wrong_commit": 0.08,
+   "latest_commit": 1.0
+  },
+  "temporal_db": {
+   "world_acc": 0.92,
+   "world_acc_ci": [
+    0.822,
+    0.978
+   ],
+   "exact": 0.8,
+   "abstain": 0.0,
+   "wrong_commit": 0.08,
+   "latest_commit": 1.0
+  },
+  "palimpsest": {
+   "world_acc": 0.78,
+   "world_acc_ci": [
+    0.622,
+    0.867
+   ],
+   "exact": 1.0,
+   "abstain": 0.2,
+   "wrong_commit": 0.02,
+   "latest_commit": 0.8
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.94,
+   "world_acc_ci": [
+    0.844,
+    1.0
+   ],
+   "exact": 0.8,
+   "abstain": 0.0,
+   "wrong_commit": 0.06,
+   "latest_commit": 0.98
+  }
+ },
+ "multi_source_update": {
+  "n": 1504,
+  "n_streams": 412,
+  "gold_status": {
+   "established": 1105,
+   "unresolved": 399
+  },
+  "gold_matches_world": 0.692154255319149,
+  "always_commit": {
+   "world_acc": 0.921,
+   "world_acc_ci": [
+    0.922,
+    0.951
+   ],
+   "exact": 0.733,
+   "abstain": 0.0,
+   "wrong_commit": 0.079,
+   "latest_commit": 1.0
+  },
+  "temporal_db": {
+   "world_acc": 0.914,
+   "world_acc_ci": [
+    0.913,
+    0.944
+   ],
+   "exact": 0.735,
+   "abstain": 0.0,
+   "wrong_commit": 0.086,
+   "latest_commit": 0.993
+  },
+  "palimpsest": {
+   "world_acc": 0.692,
+   "world_acc_ci": [
+    0.679,
+    0.736
+   ],
+   "exact": 1.0,
+   "abstain": 0.265,
+   "wrong_commit": 0.043,
+   "latest_commit": 0.733
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.84,
+   "world_acc_ci": [
+    0.826,
+    0.874
+   ],
+   "exact": 0.735,
+   "abstain": 0.0,
+   "wrong_commit": 0.16,
+   "latest_commit": 0.905
+  }
+ },
+ "delayed_report": {
+  "n": 159,
+  "n_streams": 118,
+  "gold_status": {
+   "unresolved": 103,
+   "established": 56
+  },
+  "gold_matches_world": 0.14465408805031446,
+  "always_commit": {
+   "world_acc": 0.082,
+   "world_acc_ci": [
+    0.034,
+    0.114
+   ],
+   "exact": 0.201,
+   "abstain": 0.0,
+   "wrong_commit": 0.918,
+   "latest_commit": 1.0
+  },
+  "temporal_db": {
+   "world_acc": 0.421,
+   "world_acc_ci": [
+    0.322,
+    0.482
+   ],
+   "exact": 0.352,
+   "abstain": 0.0,
+   "wrong_commit": 0.579,
+   "latest_commit": 0.535
+  },
+  "palimpsest": {
+   "world_acc": 0.145,
+   "world_acc_ci": [
+    0.076,
+    0.191
+   ],
+   "exact": 1.0,
+   "abstain": 0.648,
+   "wrong_commit": 0.208,
+   "latest_commit": 0.201
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.491,
+   "world_acc_ci": [
+    0.36,
+    0.525
+   ],
+   "exact": 0.352,
+   "abstain": 0.0,
+   "wrong_commit": 0.509,
+   "latest_commit": 0.491
+  }
+ },
+ "low_trust_error": {
+  "n": 364,
+  "n_streams": 252,
+  "gold_status": {
+   "unresolved": 333,
+   "established": 31
+  },
+  "gold_matches_world": 0.016483516483516484,
+  "always_commit": {
+   "world_acc": 0.038,
+   "world_acc_ci": [
+    0.018,
+    0.061
+   ],
+   "exact": 0.077,
+   "abstain": 0.0,
+   "wrong_commit": 0.962,
+   "latest_commit": 1.0
+  },
+  "temporal_db": {
+   "world_acc": 0.099,
+   "world_acc_ci": [
+    0.068,
+    0.138
+   ],
+   "exact": 0.085,
+   "abstain": 0.0,
+   "wrong_commit": 0.901,
+   "latest_commit": 0.929
+  },
+  "palimpsest": {
+   "world_acc": 0.016,
+   "world_acc_ci": [
+    0.003,
+    0.024
+   ],
+   "exact": 1.0,
+   "abstain": 0.915,
+   "wrong_commit": 0.069,
+   "latest_commit": 0.077
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.607,
+   "world_acc_ci": [
+    0.544,
+    0.653
+   ],
+   "exact": 0.085,
+   "abstain": 0.0,
+   "wrong_commit": 0.393,
+   "latest_commit": 0.231
+  }
+ },
+ "other_error": {
+  "n": 234,
+  "n_streams": 170,
+  "gold_status": {
+   "established": 21,
+   "unresolved": 213
+  },
+  "gold_matches_world": 0.02564102564102564,
+  "always_commit": {
+   "world_acc": 0.056,
+   "world_acc_ci": [
+    0.026,
+    0.091
+   ],
+   "exact": 0.085,
+   "abstain": 0.0,
+   "wrong_commit": 0.944,
+   "latest_commit": 1.0
+  },
+  "temporal_db": {
+   "world_acc": 0.128,
+   "world_acc_ci": [
+    0.097,
+    0.194
+   ],
+   "exact": 0.09,
+   "abstain": 0.0,
+   "wrong_commit": 0.872,
+   "latest_commit": 0.91
+  },
+  "palimpsest": {
+   "world_acc": 0.026,
+   "world_acc_ci": [
+    0.006,
+    0.047
+   ],
+   "exact": 1.0,
+   "abstain": 0.91,
+   "wrong_commit": 0.064,
+   "latest_commit": 0.085
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.368,
+   "world_acc_ci": [
+    0.297,
+    0.427
+   ],
+   "exact": 0.09,
+   "abstain": 0.0,
+   "wrong_commit": 0.632,
+   "latest_commit": 0.603
+  }
+ },
+ "stale_earlier": {
+  "n": 2376,
+  "n_streams": 464,
+  "gold_status": {
+   "established": 1308,
+   "unresolved": 1068
+  },
+  "gold_matches_world": 0.5130471380471381,
+  "always_commit": {
+   "world_acc": 0.917,
+   "world_acc_ci": [
+    0.902,
+    0.93
+   ],
+   "exact": 0.55,
+   "abstain": 0.0,
+   "wrong_commit": 0.083,
+   "latest_commit": 1.0
+  },
+  "temporal_db": {
+   "world_acc": 0.902,
+   "world_acc_ci": [
+    0.886,
+    0.916
+   ],
+   "exact": 0.551,
+   "abstain": 0.0,
+   "wrong_commit": 0.098,
+   "latest_commit": 0.981
+  },
+  "palimpsest": {
+   "world_acc": 0.513,
+   "world_acc_ci": [
+    0.46,
+    0.511
+   ],
+   "exact": 1.0,
+   "abstain": 0.449,
+   "wrong_commit": 0.037,
+   "latest_commit": 0.55
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.808,
+   "world_acc_ci": [
+    0.771,
+    0.815
+   ],
+   "exact": 0.551,
+   "abstain": 0.0,
+   "wrong_commit": 0.192,
+   "latest_commit": 0.87
+  }
+ },
+ "retraction": {
+  "n": 463,
+  "n_streams": 272,
+  "gold_status": {
+   "unresolved": 153,
+   "established": 299,
+   "unknown": 11
+  },
+  "gold_matches_world": 0.34557235421166305,
+  "always_commit": {
+   "world_acc": 0.488,
+   "world_acc_ci": [
+    0.434,
+    0.537
+   ],
+   "exact": 0.663,
+   "abstain": 0.024,
+   "wrong_commit": 0.488,
+   "latest_commit": 0.317
+  },
+  "temporal_db": {
+   "world_acc": 0.492,
+   "world_acc_ci": [
+    0.436,
+    0.54
+   ],
+   "exact": 0.67,
+   "abstain": 0.024,
+   "wrong_commit": 0.484,
+   "latest_commit": 0.315
+  },
+  "palimpsest": {
+   "world_acc": 0.346,
+   "world_acc_ci": [
+    0.284,
+    0.383
+   ],
+   "exact": 1.0,
+   "abstain": 0.354,
+   "wrong_commit": 0.3,
+   "latest_commit": 0.168
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.495,
+   "world_acc_ci": [
+    0.446,
+    0.553
+   ],
+   "exact": 0.67,
+   "abstain": 0.024,
+   "wrong_commit": 0.482,
+   "latest_commit": 0.324
+  }
+ },
+ "no_conflict": {
+  "n": 1615,
+  "n_streams": 462,
+  "gold_status": {
+   "established": 1474,
+   "unknown": 141
+  },
+  "gold_matches_world": 0.6421052631578947,
+  "always_commit": {
+   "world_acc": 0.642,
+   "world_acc_ci": [
+    0.624,
+    0.68
+   ],
+   "exact": 1.0,
+   "abstain": 0.087,
+   "wrong_commit": 0.271,
+   "latest_commit": 0.913
+  },
+  "temporal_db": {
+   "world_acc": 0.642,
+   "world_acc_ci": [
+    0.624,
+    0.68
+   ],
+   "exact": 1.0,
+   "abstain": 0.087,
+   "wrong_commit": 0.271,
+   "latest_commit": 0.913
+  },
+  "palimpsest": {
+   "world_acc": 0.642,
+   "world_acc_ci": [
+    0.624,
+    0.68
+   ],
+   "exact": 1.0,
+   "abstain": 0.087,
+   "wrong_commit": 0.271,
+   "latest_commit": 0.913
+  },
+  "palimpsest_argmax": {
+   "world_acc": 0.642,
+   "world_acc_ci": [
+    0.624,
+    0.68
+   ],
+   "exact": 1.0,
+   "abstain": 0.087,
+   "wrong_commit": 0.271,
+   "latest_commit": 0.913
+  }
+ },
+ "_risk_coverage_disputed": {
+  "n": 2279,
+  "curve": [
+   {
+    "coverage": 0.0,
+    "accuracy": 0.0,
+    "lww_accuracy": 0.0
+   },
+   {
+    "coverage": 0.025,
+    "accuracy": 0.807,
+    "lww_accuracy": 0.772
+   },
+   {
+    "coverage": 0.05,
+    "accuracy": 0.814,
+    "lww_accuracy": 0.673
+   },
+   {
+    "coverage": 0.074,
+    "accuracy": 0.769,
+    "lww_accuracy": 0.663
+   },
+   {
+    "coverage": 0.099,
+    "accuracy": 0.764,
+    "lww_accuracy": 0.653
+   },
+   {
+    "coverage": 0.123,
+    "accuracy": 0.754,
+    "lww_accuracy": 0.651
+   },
+   {
+    "coverage": 0.148,
+    "accuracy": 0.739,
+    "lww_accuracy": 0.641
+   },
+   {
+    "coverage": 0.172,
+    "accuracy": 0.72,
+    "lww_accuracy": 0.649
+   },
+   {
+    "coverage": 0.197,
+    "accuracy": 0.731,
+    "lww_accuracy": 0.67
+   },
+   {
+    "coverage": 0.222,
+    "accuracy": 0.737,
+    "lww_accuracy": 0.673
+   },
+   {
+    "coverage": 0.246,
+    "accuracy": 0.724,
+    "lww_accuracy": 0.665
+   },
+   {
+    "coverage": 0.271,
+    "accuracy": 0.715,
+    "lww_accuracy": 0.666
+   },
+   {
+    "coverage": 0.295,
+    "accuracy": 0.721,
+    "lww_accuracy": 0.673
+   },
+   {
+    "coverage": 0.32,
+    "accuracy": 0.737,
+    "lww_accuracy": 0.652
+   },
+   {
+    "coverage": 0.344,
+    "accuracy": 0.732,
+    "lww_accuracy": 0.634
+   },
+   {
+    "coverage": 0.369,
+    "accuracy": 0.723,
+    "lww_accuracy": 0.623
+   },
+   {
+    "coverage": 0.394,
+    "accuracy": 0.712,
+    "lww_accuracy": 0.625
+   },
+   {
+    "coverage": 0.418,
+    "accuracy": 0.699,
+    "lww_accuracy": 0.626
+   },
+   {
+    "coverage": 0.443,
+    "accuracy": 0.696,
+    "lww_accuracy": 0.625
+   },
+   {
+    "coverage": 0.467,
+    "accuracy": 0.69,
+    "lww_accuracy": 0.635
+   },
+   {
+    "coverage": 0.492,
+    "accuracy": 0.69,
+    "lww_accuracy": 0.638
+   },
+   {
+    "coverage": 0.516,
+    "accuracy": 0.685,
+    "lww_accuracy": 0.637
+   },
+   {
+    "coverage": 0.541,
+    "accuracy": 0.676,
+    "lww_accuracy": 0.633
+   },
+   {
+    "coverage": 0.566,
+    "accuracy": 0.671,
+    "lww_accuracy": 0.631
+   },
+   {
+    "coverage": 0.59,
+    "accuracy": 0.669,
+    "lww_accuracy": 0.628
+   },
+   {
+    "coverage": 0.615,
+    "accuracy": 0.665,
+    "lww_accuracy": 0.627
+   },
+   {
+    "coverage": 0.639,
+    "accuracy": 0.667,
+    "lww_accuracy": 0.622
+   },
+   {
+    "coverage": 0.664,
+    "accuracy": 0.663,
+    "lww_accuracy": 0.621
+   },
+   {
+    "coverage": 0.688,
+    "accuracy": 0.655,
+    "lww_accuracy": 0.616
+   },
+   {
+    "coverage": 0.713,
+    "accuracy": 0.646,
+    "lww_accuracy": 0.615
+   },
+   {
+    "coverage": 0.738,
+    "accuracy": 0.637,
+    "lww_accuracy": 0.613
+   },
+   {
+    "coverage": 0.762,
+    "accuracy": 0.632,
+    "lww_accuracy": 0.618
+   },
+   {
+    "coverage": 0.787,
+    "accuracy": 0.625,
+    "lww_accuracy": 0.617
+   },
+   {
+    "coverage": 0.811,
+    "accuracy": 0.619,
+    "lww_accuracy": 0.619
+   },
+   {
+    "coverage": 0.836,
+    "accuracy": 0.613,
+    "lww_accuracy": 0.619
+   },
+   {
+    "coverage": 0.86,
+    "accuracy": 0.61,
+    "lww_accuracy": 0.621
+   },
+   {
+    "coverage": 0.885,
+    "accuracy": 0.606,
+    "lww_accuracy": 0.621
+   },
+   {
+    "coverage": 0.91,
+    "accuracy": 0.609,
+    "lww_accuracy": 0.625
+   },
+   {
+    "coverage": 0.934,
+    "accuracy": 0.606,
+    "lww_accuracy": 0.625
+   },
+   {
+    "coverage": 0.959,
+    "accuracy": 0.599,
+    "lww_accuracy": 0.621
+   },
+   {
+    "coverage": 0.983,
+    "accuracy": 0.593,
+    "lww_accuracy": 0.619
+   }
+  ],
+  "lww_full": 0.614,
+  "argmax_full": 0.593
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "transitions": {
+  "palimpsest": {
+   "C->C": 25,
+   "instability": 3,
+   "n": 31,
+   "W->W": 3,
+   "W->C": 3
+  },
+  "palimpsest_noprop": {
+   "C->C": 25,
+   "instability": 3,
+   "n": 31,
+   "W->W": 3,
+   "W->C": 3
+  },
+  "palimpsest_commit": {
+   "C->C": 25,
+   "instability": 3,
+   "n": 31,
+   "W->W": 3,
+   "W->C": 3
+  },
+  "log_rule_adjudicator": {
+   "C->C": 25,
+   "instability": 3,
+   "n": 31,
+   "W->W": 3,
+   "W->C": 3
+  },
+  "temporal_db": {
+   "C->C": 21,
+   "instability": 3,
+   "n": 31,
+   "W->W": 7,
+   "W->C": 3
+  },
+  "always_abstain": {
+   "W->W": 29,
+   "instability": 9,
+   "n": 31,
+   "C->C": 1,
+   "W->C": 1
+  },
+  "always_commit": {
+   "C->C": 19,
+   "instability": 3,
+   "n": 31,
+   "W->W": 12
+  },
+  "log_llm_adjudicator": {
+   "C->C": 8,
+   "instability": 16,
+   "n": 31,
+   "W->W": 14,
+   "C->W": 5,
+   "W->C": 4
+  },
+  "log_nl_adjudicator": {
+   "W->W": 15,
+   "instability": 17,
+   "n": 31,
+   "C->C": 8,
+   "C->W": 5,
+   "W->C": 3
+  },
+  "log_llm_adjudicator_c2": {
+   "C->C": 13,
+   "instability": 13,
+   "n": 31,
+   "W->W": 13,
+   "C->W": 5
+  },
+  "log_nl_adjudicator_c2": {
+   "W->W": 13,
+   "instability": 16,
+   "n": 31,
+   "C->C": 8,
+   "W->C": 4,
+   "C->W": 6
+  }
+ },
+ "primary": {
+  "n": 24,
+  "empty_gold": 3,
+  "n_nonempty": 21,
+  "exact": {
+   "palimpsest": 0.9583,
+   "palimpsest_noprop": 0.625,
+   "palimpsest_commit": 0.9583,
+   "log_rule_adjudicator": 0.9583,
+   "temporal_db": 0.8333,
+   "always_abstain": 0.0,
+   "always_commit": 0.0,
+   "log_llm_adjudicator": 0.0417,
+   "log_nl_adjudicator": 0.0417,
+   "log_llm_adjudicator_c2": 0.0417,
+   "log_nl_adjudicator_c2": 0.125
+  },
+  "exact_nonempty": {
+   "palimpsest": 0.9524,
+   "palimpsest_noprop": 0.619,
+   "palimpsest_commit": 0.9524,
+   "log_rule_adjudicator": 0.9524,
+   "temporal_db": 0.9524,
+   "always_abstain": 0.0,
+   "always_commit": 0.0,
+   "log_llm_adjudicator": 0.0476,
+   "log_nl_adjudicator": 0.0476,
+   "log_llm_adjudicator_c2": 0.0476,
+   "log_nl_adjudicator_c2": 0.1429
+  }
+ }
+}

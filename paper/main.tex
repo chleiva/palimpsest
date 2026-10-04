@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,xcolor,natbib,microtype,tikz,rotating,placeins,multirow}
+\renewcommand{\topfraction}{0.9}\renewcommand{\textfraction}{0.07}\renewcommand{\floatpagefraction}{0.75}
+\usetikzlibrary{positioning,calc}
+\usepackage{times}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,pdftitle={PALIMPSEST: Evaluating Retraction and Uncertainty in LLM Memory},pdfauthor={Christian Leiva Beltran}]{hyperref}
+\newcommand{\pal}{\textsc{Palimpsest}}
+\newcommand{\rs}{\textsc{Revise-Stream}}
+\input{tables/numbers}
+
+\title{\pal: Evaluating Retraction and Uncertainty in LLM Memory\\
+\large Justified belief under evidence withdrawal: the same answers as replay at lower measured latency, and the measured price of not assuming recency}
+\author{Christian Leiva Beltr\'an\\ \small \texttt{chris@chrisgenai.com}\thanks{Research design, semantics, code and experiments were developed with AI assistance (Claude); the author directed the work, reviewed every result and takes responsibility for the content. Artifact statement: Appendix~\ref{app:artifacts}.}}
+\date{3 October 2026 --- preprint, v0.4 draft}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+LLM memories built as retrieval over an append-only store fail when the evidence itself changes. We study propagating the retraction of evidence through the justifications of the conclusions that depended on it, while refusing to commit to a revision the evidence does not determine. We give a declared semantics of \emph{justified belief} for observation streams (an assumption-based truth-maintenance oracle with operator cues, dispute, correction and withdrawal, validated against a brute-force global enumeration), a generator, \rs, that keeps the world, the observations and what they justify separable, and an output contract that scores uncertainty handling for every system alike. \pal, an incremental store whose derived beliefs pin the evidence versions that justified them, returns the same status, value and alternatives as symbolic replay on every benchmark query at six to twelve times lower measured latency; it saves total work only when queries are at least as frequent as observations, and its write cost grows exponentially in reports per key. Retraction propagation, not ordinary updating, prevents downstream errors (about 20 points in every setting, including streams derived from Wikidata histories). Symbolic maintenance beats a prompted LLM adjudicator over the same extracted claims by \sTwoHOne{} points (original protocol, 100 streams; \sTwoCtwoLogDiff{} under an amended contract on 30) while committing on a seventh as many unresolved slots, but a rule-based adjudicator matches it. A regime analysis shows that refusing to assume recency pays only where the latest report is wrong; a pre-registered self-update rule closes the single-source case at a small measured cost. One pre-registered hypothesis fails and one could not be executed as registered; every deviation is dated.
+\end{abstract}
+
+\section{Introduction}
+\input{sections/intro}
+
+\section{Related work}
+\paragraph{Belief revision and truth maintenance.} AGM revision \citep{agm1985} and belief-base postulates \citep{hansson1999} define rational change of a theory; Katsuno and Mendelzon \citep{km1991} distinguish \emph{update} (the world changed) from \emph{revision} (we were wrong), a distinction our operator cues make observable. Justification- and assumption-based truth maintenance \citep{doyle1979,dekleer1986} maintain which conclusions remain supported when premises are withdrawn; our oracle is an ATMS over environments of accepted reports and \pal{} a JTMS-like store with versioning. Incremental view maintenance \citep{gupta1993} keeps derived relations consistent under base changes; our systems benchmark is that question posed for justifications with alternatives. Non-prioritised revision \citep{hansson1997,makinson1997} allows input to be rejected; our admission is non-prioritised in that reliability never resolves disputes at the oracle level.
+\paragraph{Temporal and agent memory.} Bitemporal databases \citep{snodgrass} separate valid from transaction time. Among recent agent-memory systems, MemTX \citep{memtx2026} commits beliefs transactionally and cascades typed repair through derived records; CUPMem \citep{stale2026} invalidates dependent attributes at write time; Kumiho \citep{kumiho2026} maps AGM postulates to versioned property-graph operations; TOKI \citep{toki2026} gives a bitemporal operator algebra for contradiction resolution with audit rows; Zep/Graphiti \citep{graphiti2025} build temporal knowledge graphs. Of these, MemTX and CUPMem propagate invalidation through dependencies; none of the papers we examined scores against justified belief with retained alternatives, measures retraction propagation separately from updating, or reports the compute trade-off against replay. We have not run these systems; Table~\ref{tab:cap} states the comparison at the level of documented capabilities.
+\begin{table}[t]\centering\small
+\caption{Capabilities as documented in the cited papers (not experimentally compared; we read abstracts, method sections and, for MemTX and Nous, the full text). JM = derived beliefs are repaired when a premise is withdrawn or changed; Alt = unresolved alternatives are retained rather than resolved; Bitemp = valid and belief time distinguished; Withdraw = explicit withdrawal of evidence as an operation; Replay = compared against query-time recomputation. ``yes'' = described in the paper; ``n.r.'' = not reported in the paper (which is not evidence that the system lacks it).}\label{tab:cap}
+\begin{tabular}{lccccc}\toprule
+System & JM & Alt & Bitemp & Withdraw & Replay \\\midrule
+MemTX \citep{memtx2026} & yes (cascading repair) & n.r. & partial & yes & n.r. \\
+CUPMem \citep{stale2026} & yes (attribute-level) & n.r. & n.r. & n.r. & n.r. \\
+StateMem \citep{statemembench2026} & yes (dependency checks, guided recomputation) & n.r. & n.r. & n.r. & n.r. \\
+Kumiho \citep{kumiho2026} & edges (use n.r.) & n.r. & versions & n.r. & n.r. \\
+TOKI \citep{toki2026} & n.r. & n.r. & yes & audit rows & n.r. \\
+Zep/Graphiti \citep{graphiti2025} & n.r. & n.r. & yes & n.r. & n.r. \\
+\pal{} (this paper) & yes & yes & yes & yes & yes \\\bottomrule
+\end{tabular}
+\end{table}
+\paragraph{Benchmarks.} STALE \citep{stale2026}, LongMemEval \citep{longmemeval}, LoCoMo \citep{locomo2024} and StateMemBench \citep{statemembench2026} test memory updates and state tracking against a reference that is the latest or the true state. StateMemBench is the closest in spirit: its benchmark includes stale derived values and a control against excessive updating, and its StateMem method uses deterministic dependency checks with guided recomputation, which is justification maintenance without retained alternatives or evidence withdrawal (Table~\ref{tab:cap}; we have read its method description, not run it); \rs{} differs in scoring against justified belief with hidden world state, delayed and unreliable observations and evidence withdrawal. Knowledge editors have been shown to leave many consequences of an edit unchanged \citep{rippleedits}, a related but distinct failure.
+\paragraph{Calibration and source reliability.} Nous \citep{nous2026a,nous2026b} studies reliability-conditioned updating and shows that learning useful state decisions can need far fewer records than calibrating sources; we take from it the choice of decision-relevant metrics (risk--coverage) alongside Brier and ECE, and class-level rather than per-source priors.
+
+\section{Semantics of justified belief}\label{sec:semantics}
+\input{sections/semantics}
+
+\section{The output contract}\label{sec:contract}
+\input{sections/contract}
+
+\section{\rs{} and the evaluation settings}\label{sec:benchmark}
+\input{sections/benchmark}
+
+\section{Systems}\label{sec:systems}
+\input{sections/systems}
+
+\section{Protocol and pre-registration}\label{sec:protocol}
+\input{sections/protocol}
+
+\section{Results}\label{sec:results}
+\input{sections/results_v4}
+
+\section{Threats to validity}\label{sec:threats}
+\input{sections/threats_v4}
+
+\section{Conclusion}
+\input{sections/conclusion_v4}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\appendix
+\section{Semantics: conventions, totality and corner cases}\label{app:semantics}
+\input{appendix/semantics_detail}
+
+\section{Additional tables}\label{app:tables}
+\input{tables/slots}
+Table~\ref{tab:slots} breaks Setting 1 accuracy down by slot: systems without justifications fail on \emph{erroneous?} almost completely, lose most on downstream slots, and answer as-of-belief-time questions from the current state.
+\input{tables/sensitivity}
+Table~\ref{tab:sens}: under literal P0 a stream yields \sOneLitPZeroWarr{} warranted downstream queries and the propagation effect is $+\sOneLitPZeroEffect$ points; under P1, \sOnePOneWarr{} and $+\sOnePOneEffect$. The qualitative conclusion does not depend on the policy; the size of the usable stratum does.
+\input{tables/setting2_strong}
+\input{tables/noise}
+\input{tables/regime_s1}
+\input{tables/holm}
+\begin{figure}[t]\centering\includegraphics[width=\textwidth]{figures/reliability.pdf}
+\caption{Reliability diagrams on the \RqTwoSupN{} Setting 2 value queries the LLM adjudicator answered as established (15 equal-mass bins; bin counts annotated; the sampling comparator uses its 300-query subset).}\label{fig:rel}
+\end{figure}
+
+\section{Error taxonomy of the LLM adjudicator (Setting 2)}\label{app:errors}
+Rule-coded categories over the 4{,}062 primary answers (non-companion, non-\texttt{reported}) of the claims-log LLM adjudicator, original protocol, against the frozen gold (\texttt{data/s2/\_error\_taxonomy\_llm.json}): correct 47.7\%; premature commitment on an unresolved or possible slot 15.7\%; under-commitment on an established slot with the gold value among the listed alternatives 9.8\%, and with it absent 1.0\%; wrong alternative set on an unresolved slot 8.2\%; wrong committed value 6.0\%; an answer on a slot whose gold is \texttt{unknown} 6.5\%; \texttt{unknown} on an established slot 1.6\%; convention cases 3.0\% in total (empty-set gold 1.1\%, established-false gold 1.9\%; the categories are exclusive, assigned in the order listed); status confusion and other 0.4\%. The coding is by rule, not by a blinded human; it separates commitment errors from convention errors and from value errors, which is what the main text uses.
+
+\section{Prompts and contract}\label{app:prompts}
+\input{appendix/prompts}
+
+\section{Chronology of decisions}\label{app:chronology}
+\input{appendix/chronology}
+
+\section{Artifact statement}\label{app:artifacts}
+The code (semantics and both oracles, generator, store, baselines, scoring, pipelines), the frozen evaluation sets with gold and hidden labels, the Setting 3 fetch script and revision ids, every prompt before and after the amendment, every raw model output and batch record, the cost ledger, the pre-registration with its dated deviations, and the scripts that regenerate every table and figure from cached outputs without an API call (\texttt{scripts/make\_tables.py}, \texttt{scripts/make\_figures.py}) will be released as a versioned archive on Zenodo (the DOI is reserved at deposit and inserted here before public release; until then the complete package is available from the author on request, and no claim of public availability is made); the LongMemEval file is the \texttt{longmemeval-cleaned} release of 3 October 2026. Model identifiers: \texttt{claude-haiku-4-5-20251001} for every stage and \texttt{claude-sonnet-4-6} for the sign-stability subset, all through the Message Batches API between 3 October 2026 00:00 and 22:00 UTC. Total measured spend \$\spendTotal.
+\end{document}

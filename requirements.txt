@@ -1,0 +1,5 @@
+# Runtime: Python 3.11+ standard library only.
+# Tests, scoring validation and figures:
+pytest>=8
+jsonschema>=4
+matplotlib>=3.8

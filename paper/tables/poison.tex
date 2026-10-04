@@ -1,0 +1,16 @@
+\begin{table}[t]\centering\small
+\caption{Poisoning (Setting 1, 60 streams per cell). Attacker injects false assertions at a rate of the honest ones, half with a false change cue; harm = share of value queries answered \emph{established} with the poisoned value; support = mean support the evidence model assigns to poisoned vs.\ honest candidates.}\label{tab:poison}
+\begin{tabular}{llcccccc}
+\toprule
+Channel & Rate & \multicolumn{2}{c}{\textsc{Palimpsest}} & \multicolumn{2}{c}{Temporal DB} & \multicolumn{2}{c}{Support} \\
+ & & harm$\downarrow$ & unresolved & harm$\downarrow$ & unresolved & poisoned & honest \\
+\midrule
+low & 0.01 & 0.003 & 0.27 & 0.003 & 0.03 & 0.21 & 0.67 \\
+low & 0.05 & 0.024 & 0.28 & 0.030 & 0.03 & 0.33 & 0.67 \\
+low & 0.20 & 0.112 & 0.30 & 0.151 & 0.03 & 0.32 & 0.65 \\
+trusted & 0.01 & 0.005 & 0.27 & 0.005 & 0.03 & 0.63 & 0.67 \\
+trusted & 0.05 & 0.027 & 0.28 & 0.033 & 0.03 & 0.66 & 0.66 \\
+trusted & 0.20 & 0.115 & 0.30 & 0.153 & 0.03 & 0.63 & 0.63 \\
+\bottomrule
+\end{tabular}
+\end{table}

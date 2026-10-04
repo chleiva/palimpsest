@@ -1,0 +1,17 @@
+{
+ "v2_pairs": {
+  "('unresolved', None, 'established', True)": 34,
+  "('established', False, 'established', False)": 13,
+  "('established', True, 'established', True)": 12,
+  "('unresolved', None, 'established', False)": 10
+ },
+ "status_counts": {
+  "pal_unresolved": 44,
+  "llm_unresolved": 20,
+  "pal_established": 25,
+  "llm_established": 44,
+  "llm_possible": 4,
+  "unmapped": 9,
+  "llm_unknown": 1
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "transitions": {
+  "palimpsest": {
+   "C->C": 499,
+   "instability": 54,
+   "n": 587,
+   "C->W": 37,
+   "W->W": 44,
+   "W->C": 7
+  },
+  "palimpsest_noprop": {
+   "C->C": 481,
+   "instability": 63,
+   "n": 587,
+   "W->C": 20,
+   "C->W": 36,
+   "W->W": 50
+  },
+  "palimpsest_commit": {
+   "C->C": 249,
+   "instability": 63,
+   "n": 587,
+   "W->W": 334,
+   "C->W": 2,
+   "W->C": 2
+  },
+  "log_rule_adjudicator": {
+   "C->C": 499,
+   "instability": 54,
+   "n": 587,
+   "C->W": 37,
+   "W->W": 44,
+   "W->C": 7
+  },
+  "temporal_db": {
+   "C->C": 245,
+   "instability": 88,
+   "n": 587,
+   "W->W": 338,
+   "C->W": 2,
+   "W->C": 2
+  },
+  "always_abstain": {
+   "W->W": 504,
+   "instability": 71,
+   "n": 587,
+   "C->C": 73,
+   "C->W": 10
+  },
+  "always_commit": {
+   "C->C": 148,
+   "instability": 124,
+   "n": 587,
+   "W->W": 427,
+   "C->W": 7,
+   "W->C": 5
+  },
+  "log_llm_adjudicator": {
+   "W->W": 400,
+   "instability": 237,
+   "n": 587,
+   "C->W": 47,
+   "C->C": 121,
+   "W->C": 19
+  },
+  "log_nl_adjudicator": {
+   "W->W": 122,
+   "instability": 78,
+   "n": 172,
+   "C->C": 32,
+   "C->W": 11,
+   "W->C": 7
+  },
+  "log_llm_topk40": {
+   "W->W": 104,
+   "instability": 91,
+   "n": 172,
+   "C->W": 23,
+   "C->C": 38,
+   "W->C": 7
+  },
+  "log_llm_adjudicator_c2": {
+   "W->W": 113,
+   "instability": 77,
+   "n": 172,
+   "C->W": 19,
+   "C->C": 35,
+   "W->C": 5
+  },
+  "log_llm_topk20_c2": {
+   "C->C": 43,
+   "instability": 83,
+   "n": 172,
+   "W->C": 12,
+   "W->W": 100,
+   "C->W": 17
+  },
+  "log_llm_topk40_c2": {
+   "W->W": 107,
+   "instability": 83,
+   "n": 172,
+   "C->W": 19,
+   "C->C": 39,
+   "W->C": 7
+  },
+  "log_nl_adjudicator_c2": {
+   "W->W": 120,
+   "instability": 81,
+   "n": 172,
+   "C->C": 31,
+   "C->W": 9,
+   "W->C": 12
+  },
+  "log_llm_topk10_c2": {
+   "C->C": 57,
+   "instability": 54,
+   "n": 172,
+   "C->W": 13,
+   "W->W": 94,
+   "W->C": 8
+  }
+ },
+ "primary": {
+  "n": 741,
+  "empty_gold": 21,
+  "n_nonempty": 720,
+  "exact": {
+   "palimpsest": 0.9541,
+   "palimpsest_noprop": 0.7625,
+   "palimpsest_commit": 0.9771,
+   "log_rule_adjudicator": 0.9541,
+   "temporal_db": 0.7922,
+   "always_abstain": 0.0,
+   "always_commit": 0.4413,
+   "log_llm_adjudicator": 0.525,
+   "log_nl_adjudicator": 0.1026,
+   "log_llm_topk40": 0.1309,
+   "log_llm_adjudicator_c2": 0.1377,
+   "log_llm_topk20_c2": 0.1201,
+   "log_llm_topk40_c2": 0.1242,
+   "log_nl_adjudicator_c2": 0.0904,
+   "log_llm_topk10_c2": 0.0729
+  },
+  "exact_nonempty": {
+   "palimpsest": 0.9528,
+   "palimpsest_noprop": 0.7847,
+   "palimpsest_commit": 0.9764,
+   "log_rule_adjudicator": 0.9528,
+   "temporal_db": 0.8153,
+   "always_abstain": 0.0,
+   "always_commit": 0.4542,
+   "log_llm_adjudicator": 0.5403,
+   "log_nl_adjudicator": 0.1056,
+   "log_llm_topk40": 0.1347,
+   "log_llm_adjudicator_c2": 0.1375,
+   "log_llm_topk20_c2": 0.1236,
+   "log_llm_topk40_c2": 0.1264,
+   "log_nl_adjudicator_c2": 0.0917,
+   "log_llm_topk10_c2": 0.075
+  }
+ }
+}

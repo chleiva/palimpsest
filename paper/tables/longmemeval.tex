@@ -1,0 +1,15 @@
+\begin{table}[t]\centering\footnotesize
+\caption{LongMemEval knowledge-update items (78; 69 mapped to an extracted attribute). Systems answer one structured slot from claims extracted turn by turn; a Haiku judge compares the answer with the reference. Coverage = share answered as established; accuracy over all items and over answered items. Not comparable to published LongMemEval scores.}\label{tab:lme}
+\begin{tabular}{lccc}
+\toprule
+System & Coverage & Acc.\ (all) & Acc.\ (answered) \\
+\midrule
+\pal{} (P0c) & 0.32 & 0.167 & 0.400 \\
+\pal{} + self-update (exploratory) & 0.74 & 0.474 & 0.621 \\
+Temporal DB (last write wins) & 0.88 & 0.526 & 0.594 \\
+Always-commit & 0.88 & 0.526 & 0.594 \\
+Always-abstain & 0.00 & 0.038 & 0.000 \\
+Claims log + LLM adjudicator & 0.56 & 0.359 & 0.614 \\
+\bottomrule
+\end{tabular}
+\end{table}

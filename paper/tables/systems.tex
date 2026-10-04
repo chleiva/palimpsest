@@ -1,0 +1,49 @@
+\begin{sidewaystable}\centering\small
+\caption{Incremental justification maintenance vs symbolic replay of the same semantics on the same streams and queries (no LLM). CPU seconds per stream (process time), query latency mean / p95 / max in ms, peak traced memory in MB; $r$ = queries per observation. Answers agree on every query (last column: disagreements / answers). Scale rows: generated streams with $m$ reports per key and horizon $T$ days, $r=1$.}\label{tab:sys}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Workload & System & CPU total & CPU write & lat.\ mean & p95 & max & mem & recomputes & disagree \\
+\midrule
+Setting 1, r=0.1 & incremental & 0.33 & 0.32 & 0.4 & 1.0 & 12 & 1.0 & 136 & 0/799 \\
+ & replay cold & 0.03 & 0.00 & 2.6 & 6.7 & 61 & 0.1 & 17 &  \\
+ & replay lazy & 0.04 & 0.00 & 2.6 & 6.8 & 98 & 0.2 & 17 &  \\
+\addlinespace[2pt]
+Setting 1, r=0.33 & incremental & 0.32 & 0.31 & 0.4 & 1.2 & 10 & 0.9 & 136 & 0/2637 \\
+ & replay cold & 0.11 & 0.00 & 2.6 & 9.2 & 69 & 0.3 & 57 &  \\
+ & replay lazy & 0.11 & 0.00 & 2.5 & 9.4 & 73 & 0.5 & 56 &  \\
+\addlinespace[2pt]
+Setting 1, r=1.0 & incremental & 0.36 & 0.32 & 0.4 & 1.5 & 57 & 1.0 & 136 & 0/7974 \\
+ & replay cold & 0.32 & 0.00 & 2.4 & 11.0 & 79 & 0.5 & 173 &  \\
+ & replay lazy & 0.32 & 0.00 & 2.4 & 11.1 & 117 & 1.3 & 165 &  \\
+\addlinespace[2pt]
+Setting 1, r=3.0 & incremental & 0.46 & 0.32 & 0.3 & 1.6 & 40 & 1.2 & 136 & 0/23922 \\
+ & replay cold & 0.93 & 0.00 & 2.3 & 11.7 & 85 & 0.7 & 520 &  \\
+ & replay lazy & 0.87 & 0.00 & 2.2 & 11.1 & 81 & 3.2 & 449 &  \\
+\addlinespace[2pt]
+scale $m$=10, $T$=120, $r$=1.0 & incremental & 2.15 & 1.89 & 1.3 & 7.0 & 56 & 8.5 & 206 & 0/992 \\
+ & replay cold & 3.16 & 0.00 & 15.7 & 91.2 & 487 & 1.8 & 248 &  \\
+ & replay lazy & 3.09 & 0.00 & 15.4 & 82.5 & 481 & 11.0 & 240 &  \\
+\addlinespace[2pt]
+scale $m$=10, $T$=60, $r$=1.0 & incremental & 0.97 & 0.86 & 0.8 & 1.9 & 57 & 4.1 & 134 & 0/668 \\
+ & replay cold & 1.10 & 0.00 & 8.3 & 31.5 & 597 & 1.5 & 176 &  \\
+ & replay lazy & 1.01 & 0.00 & 7.7 & 29.7 & 597 & 3.9 & 167 &  \\
+\addlinespace[2pt]
+scale $m$=13, $T$=60, $r$=1.0 & incremental & 3.72 & 3.61 & 0.9 & 1.8 & 215 & 22.4 & 138 & 0/686 \\
+ & replay cold & 1.66 & 0.00 & 12.5 & 34.3 & 2553 & 4.2 & 183 &  \\
+ & replay lazy & 1.62 & 0.00 & 12.2 & 32.2 & 2475 & 7.2 & 174 &  \\
+\addlinespace[2pt]
+scale $m$=7, $T$=120, $r$=1.0 & incremental & 0.57 & 0.48 & 0.6 & 2.7 & 11 & 1.9 & 166 & 0/800 \\
+ & replay cold & 0.66 & 0.00 & 4.2 & 19.6 & 73 & 0.7 & 227 &  \\
+ & replay lazy & 0.68 & 0.00 & 4.4 & 18.0 & 104 & 2.7 & 218 &  \\
+\addlinespace[2pt]
+scale $m$=7, $T$=240, $r$=1.0 & incremental & 0.79 & 0.61 & 0.9 & 4.1 & 16 & 2.9 & 187 & 0/934 \\
+ & replay cold & 1.38 & 0.00 & 7.4 & 31.7 & 108 & 1.1 & 259 &  \\
+ & replay lazy & 1.42 & 0.00 & 7.6 & 31.3 & 177 & 5.3 & 254 &  \\
+\addlinespace[2pt]
+scale $m$=7, $T$=60, $r$=1.0 & incremental & 0.34 & 0.30 & 0.3 & 1.4 & 11 & 1.1 & 129 & 0/618 \\
+ & replay cold & 0.24 & 0.00 & 2.0 & 8.2 & 45 & 0.4 & 161 &  \\
+ & replay lazy & 0.24 & 0.00 & 2.0 & 8.3 & 49 & 1.0 & 153 &  \\
+\addlinespace[2pt]
+\bottomrule
+\end{tabular}
+\end{sidewaystable}

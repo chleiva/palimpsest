@@ -1,0 +1,116 @@
+{
+ "low@0.01": {
+  "palimpsest": {
+   "world_acc_est": 0.8787979612979613,
+   "harm_rate": 0.003181818181818182,
+   "unresolved_share": 0.27324070673335377
+  },
+  "temporal_db": {
+   "world_acc_est": 0.8859556579041873,
+   "harm_rate": 0.003181818181818182,
+   "unresolved_share": 0.028356888209829387
+  },
+  "always_commit": {
+   "world_acc_est": 0.83993256063109,
+   "harm_rate": 0.0048484848484848485,
+   "unresolved_share": 0.025023554876496053
+  },
+  "support_poisoned_mean": 0.21101925704284058,
+  "support_honest_mean": 0.6714509181178632
+ },
+ "low@0.05": {
+  "palimpsest": {
+   "world_acc_est": 0.892984237984238,
+   "harm_rate": 0.02406103156103156,
+   "unresolved_share": 0.2767363558927026
+  },
+  "temporal_db": {
+   "world_acc_est": 0.8798920568309113,
+   "harm_rate": 0.029787527287527288,
+   "unresolved_share": 0.02937987937987938
+  },
+  "always_commit": {
+   "world_acc_est": 0.8459045560419399,
+   "harm_rate": 0.03075974950974951,
+   "unresolved_share": 0.02099243349243349
+  },
+  "support_poisoned_mean": 0.3331458771052411,
+  "support_honest_mean": 0.6679843155871413
+ },
+ "low@0.2": {
+  "palimpsest": {
+   "world_acc_est": 0.7797354497354497,
+   "harm_rate": 0.11183108114222665,
+   "unresolved_share": 0.30295891429405364
+  },
+  "temporal_db": {
+   "world_acc_est": 0.7487678906061259,
+   "harm_rate": 0.15066409725465452,
+   "unresolved_share": 0.032084642939906094
+  },
+  "always_commit": {
+   "world_acc_est": 0.7347914966297319,
+   "harm_rate": 0.13713896497952224,
+   "unresolved_share": 0.020193524798787957
+  },
+  "support_poisoned_mean": 0.3203130804592002,
+  "support_honest_mean": 0.6533230387594804
+ },
+ "trusted@0.01": {
+  "palimpsest": {
+   "world_acc_est": 0.8772828097828098,
+   "harm_rate": 0.004570707070707071,
+   "unresolved_share": 0.2746295956222427
+  },
+  "temporal_db": {
+   "world_acc_est": 0.8844405063890358,
+   "harm_rate": 0.004570707070707071,
+   "unresolved_share": 0.029745777098718274
+  },
+  "always_commit": {
+   "world_acc_est": 0.8384174091159385,
+   "harm_rate": 0.006237373737373738,
+   "unresolved_share": 0.02641244376538494
+  },
+  "support_poisoned_mean": 0.6250699938728004,
+  "support_honest_mean": 0.6685312774928647
+ },
+ "trusted@0.05": {
+  "palimpsest": {
+   "world_acc_est": 0.8823024198024199,
+   "harm_rate": 0.02691817441817442,
+   "unresolved_share": 0.2765140781704249
+  },
+  "temporal_db": {
+   "world_acc_est": 0.8703689410577955,
+   "harm_rate": 0.032644670144670145,
+   "unresolved_share": 0.029288304288304288
+  },
+  "always_commit": {
+   "world_acc_est": 0.8360784099657939,
+   "harm_rate": 0.033616892366892366,
+   "unresolved_share": 0.0209008584008584
+  },
+  "support_poisoned_mean": 0.6551322461681474,
+  "support_honest_mean": 0.6584648284203667
+ },
+ "trusted@0.2": {
+  "palimpsest": {
+   "world_acc_est": 0.7667917267917268,
+   "harm_rate": 0.11484695415809967,
+   "unresolved_share": 0.3032631470982864
+  },
+  "temporal_db": {
+   "world_acc_est": 0.7406185399567753,
+   "harm_rate": 0.15336250995306722,
+   "unresolved_share": 0.03162167997694314
+  },
+  "always_commit": {
+   "world_acc_est": 0.7307817563699917,
+   "harm_rate": 0.1370728274133847,
+   "unresolved_share": 0.019730561835824993
+  },
+  "support_poisoned_mean": 0.6342160533006751,
+  "support_honest_mean": 0.628158115024123
+ }
+}

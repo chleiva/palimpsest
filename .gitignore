@@ -1,0 +1,41 @@
+# secrets — never commit
+.secrets/
+*.key
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# LaTeX build products (main.pdf is kept deliberately)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+# large cached data: fetched with scripts/fetch_release_data.py from the Zenodo package
+data/setting1/
+data/setting2*/
+data/setting3/
+data/fresh_su/
+data/poison_streams/
+data/s2/s2_*/
+data/s2_strong/s2_*/
+data/s2_dev/
+data/s2_mock*/
+data/s3/s3_*/
+data/anthropic_batches/
+data/longmemeval/claims.json
+data/longmemeval/answers.json
+bridge/data/
+bridge/responses/
+# logs and scratch
+*.log
+data/_s1_done.txt
+data/longmemeval/items.json
+# local drafts and the deposit zip (the release lives on Zenodo)
+PALIMPSEST_draft_*.pdf
+PALIMPSEST_research_plan_v0.1.md
+palimpsest-v1.0.zip
+.DS_Store

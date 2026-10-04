@@ -1,0 +1,63 @@
+{
+ "E_extraction_tokens_per_stream": 188104.88,
+ "n_obs": 130.94,
+ "A_nl_tokens_per_query": 6547.048907044579,
+ "A_log_tokens_per_query": 5099.369213352514,
+ "r_star_nl": 0.2194229961172724,
+ "curves": [
+  {
+   "ratio": 0.1,
+   "palimpsest": {
+    "cost": 188104.88,
+    "warranted_acc": 0.9530909326363872,
+    "resolvable_acc": 0.9749207497104848
+   },
+   "log_nl": {
+    "cost": 85727.05838884173,
+    "warranted_acc": 0.3297853072853073,
+    "resolvable_acc": 0.5538738819101187
+   },
+   "log_llm": {
+    "cost": 254876.02047963784,
+    "warranted_acc": 0.5139739889739889,
+    "resolvable_acc": 0.6664357418040862
+   }
+  },
+  {
+   "ratio": 0.33,
+   "palimpsest": {
+    "cost": 188104.88,
+    "warranted_acc": 0.9530909326363872,
+    "resolvable_acc": 0.9749207497104848
+   },
+   "log_nl": {
+    "cost": 282899.2926831777,
+    "warranted_acc": 0.3297853072853073,
+    "resolvable_acc": 0.5538738819101187
+   },
+   "log_llm": {
+    "cost": 408449.6435828048,
+    "warranted_acc": 0.5139739889739889,
+    "resolvable_acc": 0.6664357418040862
+   }
+  },
+  {
+   "ratio": 1.0,
+   "palimpsest": {
+    "cost": 188104.88,
+    "warranted_acc": 0.9530909326363872,
+    "resolvable_acc": 0.9749207497104848
+   },
+   "log_nl": {
+    "cost": 857270.5838884172,
+    "warranted_acc": 0.3297853072853073,
+    "resolvable_acc": 0.5538738819101187
+   },
+   "log_llm": {
+    "cost": 855816.2847963781,
+    "warranted_acc": 0.5139739889739889,
+    "resolvable_acc": 0.6664357418040862
+   }
+  }
+ ]
+}

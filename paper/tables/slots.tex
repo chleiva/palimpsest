@@ -1,0 +1,17 @@
+\begin{table}[t]\centering\small
+\caption{Setting 1: exact accuracy by query slot (mean over 500 streams).}\label{tab:slots}
+\begin{tabular}{lcccccc}
+\toprule
+Slot & \textsc{Palimpsest} & no propagation & forced commit & Temporal DB & Always commit & Always abstain \\
+\midrule
+as-of valid time & 1.000 & 1.000 & 0.743 & 0.653 & 0.638 & 0.168 \\
+as-of belief time & 1.000 & 1.000 & 0.808 & 0.777 & 0.782 & 0.223 \\
+current & 1.000 & 1.000 & 0.723 & 0.675 & 0.701 & 0.242 \\
+downstream (derived) & 1.000 & 0.870 & 0.664 & 0.578 & 0.296 & 0.000 \\
+reported & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+changed? & 1.000 & 1.000 & 0.932 & 0.919 & 0.919 & 0.068 \\
+erroneous? & 1.000 & 1.000 & 0.704 & 0.001 & 0.001 & 0.296 \\
+holds at $t$? & 1.000 & 1.000 & 0.877 & 0.771 & 0.734 & 0.224 \\
+\bottomrule
+\end{tabular}
+\end{table}

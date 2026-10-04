@@ -1,0 +1,32 @@
+{
+ "n": 4062,
+ "taxonomy": {
+  "premature commitment": 639,
+  "correct": 1937,
+  "gold unknown, answered established": 146,
+  "gold unknown, answered unresolved": 82,
+  "under-commit: gold value among alternatives": 399,
+  "wrong value (committed)": 244,
+  "wrong alternative set": 333,
+  "under-commit: gold value absent": 40,
+  "convention: established-false gold -> unknown": 23,
+  "convention: established-false gold -> possible": 26,
+  "answered unknown on established": 67,
+  "gold unknown, answered possible": 37,
+  "convention: empty-set gold -> unknown": 25,
+  "convention: established-false gold -> unresolved": 15,
+  "convention: empty-set gold -> established": 11,
+  "convention: empty-set gold -> unresolved": 4,
+  "convention: established-false gold -> established": 15,
+  "status confusion unresolved/possible": 8,
+  "answered unknown on unresolved": 8,
+  "convention: empty-set gold -> possible": 3
+ },
+ "convention_total": 122,
+ "primary": {
+  "n": 741,
+  "empty_gold": 21,
+  "micro_exact": 0.524966261808367,
+  "micro_exact_nonempty": 0.5402777777777777
+ }
+}

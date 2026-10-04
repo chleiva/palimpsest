@@ -1,0 +1,303 @@
+{
+  "stream_id": "acme_v1",
+  "meta": {
+    "purpose": "rule propagation (employer -> hq -> work_city), a defeasible exception, a cued HQ move (P0c: the change cue identifies the operator), an uncued low-trust competing employer report (dispute), and an explicit evidence retraction that warrants a downstream revision"
+  },
+  "domain": {
+    "entities": [
+      "dana",
+      "acme",
+      "globex",
+      "berlin",
+      "madrid",
+      "lisbon"
+    ],
+    "attributes": {
+      "employer": {
+        "type": "entity",
+        "cardinality": "single",
+        "changeable": true,
+        "error_allowed": true
+      },
+      "hq_city": {
+        "type": "entity",
+        "cardinality": "single",
+        "changeable": true,
+        "error_allowed": true
+      },
+      "remote": {
+        "type": "bool",
+        "cardinality": "single",
+        "changeable": true,
+        "error_allowed": true
+      },
+      "work_city": {
+        "type": "entity",
+        "cardinality": "single",
+        "changeable": true,
+        "error_allowed": false,
+        "derived": true
+      }
+    },
+    "rules": [
+      {
+        "id": "r_work",
+        "kind": "defeasible",
+        "head": [
+          "work_city",
+          "?e",
+          "?c"
+        ],
+        "body": [
+          [
+            "employer",
+            "?e",
+            "?x"
+          ],
+          [
+            "hq_city",
+            "?x",
+            "?c"
+          ]
+        ],
+        "exceptions": [
+          [
+            "remote",
+            "?e",
+            true
+          ]
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "press": {
+      "class": "trusted",
+      "origin": "g_press"
+    },
+    "wire": {
+      "class": "standard",
+      "origin": "g_press"
+    },
+    "blog": {
+      "class": "low",
+      "origin": "g_blog"
+    },
+    "hr": {
+      "class": "trusted",
+      "origin": "g_hr"
+    }
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "t": 1,
+      "source": "press",
+      "kind": "assert",
+      "entity": "acme",
+      "attr": "hq_city",
+      "value": "berlin"
+    },
+    {
+      "id": "o2",
+      "t": 1,
+      "source": "press",
+      "kind": "assert",
+      "entity": "globex",
+      "attr": "hq_city",
+      "value": "madrid"
+    },
+    {
+      "id": "o3",
+      "t": 2,
+      "source": "hr",
+      "kind": "assert",
+      "entity": "dana",
+      "attr": "employer",
+      "value": "acme"
+    },
+    {
+      "id": "o4",
+      "t": 3,
+      "source": "wire",
+      "kind": "assert",
+      "entity": "acme",
+      "attr": "hq_city",
+      "value": "berlin"
+    },
+    {
+      "id": "o9",
+      "t": 4,
+      "source": "press",
+      "kind": "assert",
+      "entity": "globex",
+      "attr": "hq_city",
+      "value": "lisbon",
+      "op_cue": "change",
+      "op_from": "madrid"
+    },
+    {
+      "id": "o5",
+      "t": 5,
+      "source": "blog",
+      "kind": "assert",
+      "entity": "dana",
+      "attr": "employer",
+      "value": "globex"
+    },
+    {
+      "id": "o6",
+      "t": 7,
+      "source": "hr",
+      "kind": "retract",
+      "target": "o3"
+    },
+    {
+      "id": "o7",
+      "t": 8,
+      "source": "hr",
+      "kind": "assert",
+      "entity": "dana",
+      "attr": "employer",
+      "value": "globex",
+      "valid": {
+        "cue": "since",
+        "t": 6
+      }
+    },
+    {
+      "id": "o8",
+      "t": 9,
+      "source": "hr",
+      "kind": "assert",
+      "entity": "dana",
+      "attr": "remote",
+      "value": true
+    }
+  ],
+  "queries": [
+    {
+      "id": "q_work_t4",
+      "slot": "downstream",
+      "tau": 4,
+      "entity": "dana",
+      "attr": "work_city",
+      "expect": "established",
+      "expect_value": "berlin"
+    },
+    {
+      "id": "q_work_t5",
+      "slot": "downstream",
+      "tau": 5,
+      "entity": "dana",
+      "attr": "work_city",
+      "tags": [
+        "retraction_consequence"
+      ],
+      "expect": "unresolved"
+    },
+    {
+      "id": "q_emp_t5",
+      "slot": "current",
+      "tau": 5,
+      "entity": "dana",
+      "attr": "employer",
+      "expect": "unresolved"
+    },
+    {
+      "id": "q_work_t7",
+      "slot": "downstream",
+      "tau": 7,
+      "entity": "dana",
+      "attr": "work_city",
+      "tags": [
+        "retraction_consequence"
+      ],
+      "expect": "established",
+      "expect_value": "lisbon"
+    },
+    {
+      "id": "q_emp_t7",
+      "slot": "current",
+      "tau": 7,
+      "entity": "dana",
+      "attr": "employer",
+      "expect": "established",
+      "expect_value": "globex"
+    },
+    {
+      "id": "q_work_t9",
+      "slot": "downstream",
+      "tau": 9,
+      "entity": "dana",
+      "attr": "work_city",
+      "tags": [
+        "retraction_consequence"
+      ],
+      "expect": "unknown"
+    },
+    {
+      "id": "q_emp_asof_3",
+      "slot": "asof",
+      "tau": 9,
+      "t": 3,
+      "entity": "dana",
+      "attr": "employer",
+      "expect": "unknown"
+    },
+    {
+      "id": "q_belief_t4",
+      "slot": "belief_asof",
+      "tau": 9,
+      "tau_prime": 4,
+      "entity": "dana",
+      "attr": "employer",
+      "expect": "established",
+      "expect_value": "acme"
+    },
+    {
+      "id": "q_hq_reported",
+      "slot": "reported",
+      "tau": 9,
+      "entity": "acme",
+      "attr": "hq_city",
+      "expect": "established"
+    },
+    {
+      "id": "q_hq_t4",
+      "slot": "current",
+      "tau": 4,
+      "entity": "globex",
+      "attr": "hq_city",
+      "tags": [
+        "retraction_consequence"
+      ],
+      "expect": "established",
+      "expect_value": "lisbon"
+    },
+    {
+      "id": "q_hq_moved_t4",
+      "slot": "yesno",
+      "tau": 4,
+      "prop": {
+        "kind": "changed",
+        "entity": "globex",
+        "attr": "hq_city",
+        "from": "madrid",
+        "to": "lisbon"
+      },
+      "expect": "established",
+      "expect_value": true
+    },
+    {
+      "id": "q_hq_asof_2",
+      "slot": "asof",
+      "tau": 4,
+      "t": 2,
+      "entity": "globex",
+      "attr": "hq_city",
+      "expect": "unresolved",
+      "note": "change date unknown within (1,4] -> as-of day 2 is unresolved by construction (SEMANTICS \u00a77)"
+    }
+  ]
+}

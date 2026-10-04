@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://palimpsest.research/contract/answer.schema.json",
+  "title": "PALIMPSEST shared output contract — answer object (v0.1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["query_id", "status", "assertion", "alternatives", "provenance"],
+  "properties": {
+    "query_id": {"type": "string"},
+    "status": {
+      "type": "string",
+      "enum": ["established", "possible", "unresolved", "unknown"],
+      "description": "established: holds under every admissible interpretation of the admitted observations (a refuted yes/no proposition is established with assertion=false). possible: a single proposition holds under some but not all interpretations. unresolved: the slot asks for a value and interpretations disagree; alternatives lists them and assertion is null. unknown: no admitted observation bears on the slot."
+    },
+    "assertion": {
+      "description": "The answer for established/possible: a canonical value (single-valued slot), a sorted list of values (multi-valued slot), a boolean (yes/no slot), or an object {value: [observation ids]} for a reported slot. null for unresolved/unknown.",
+      "type": ["string", "number", "boolean", "array", "object", "null"]
+    },
+    "alternatives": {
+      "type": "array",
+      "description": "For unresolved: the candidate answers, each a canonical value, a sorted list (multi-valued slot) or null (meaning 'no value'). Empty otherwise.",
+      "items": {"type": ["string", "number", "boolean", "array", "null"]}
+    },
+    "provenance": {
+      "type": "array",
+      "description": "Observation ids the answer relies on. Validated for actual support, not existence.",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "explanation": {
+      "type": "string",
+      "maxLength": 600,
+      "description": "Optional free text. Never scored; used only for qualitative error analysis."
+    }
+  }
+}

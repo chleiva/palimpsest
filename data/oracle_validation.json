@@ -1,0 +1,39 @@
+{
+ "n_streams": 303,
+ "n_queries": 21825,
+ "n_derived": 10847,
+ "disagreements": [],
+ "n_product_checks": 21825,
+ "product_failures": [],
+ "closure_failures": [],
+ "n_skipped_large": 1299,
+ "max_enumerated": 15,
+ "max_obs": 15,
+ "static_check": {
+  "s1_0000.json": true,
+  "s3_Q102361389.json": true,
+  "acme.json": true,
+  "alex.json": true,
+  "birthdate.json": true
+ },
+ "counterexample": {
+  "static_check_passes": false,
+  "per_key": {
+   "status": "unresolved",
+   "assertion": null,
+   "alternatives": [
+    "A",
+    "B",
+    null
+   ]
+  },
+  "global": {
+   "status": "unresolved",
+   "assertion": null,
+   "alternatives": [
+    "A",
+    "B"
+   ]
+  }
+ }
+}

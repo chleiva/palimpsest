@@ -1,0 +1,18 @@
+\begin{sidewaystable}\centering\small
+\caption{When is recency right? Value queries on single-valued keys of 200 fresh generated streams (seeds 20000--20199), classified from the hidden generator labels by what the latest report on the key is; the same queries are scored under P0c and under the self-update variant P0cSU (paired). Accuracy against the hidden world value; LWW = last-write-wins by report time; valid = by valid-time anchor (temporal DB); abst.\ = abstention rate; wrong commit = committed to a value other than the world's (not a transition); argmax = support-ranked commitment on unresolved slots (P0c). $^\dagger$Poisoning row from 60 attack streams (rate 0.2, low channel), P0c only; its last column is the share of queries committed to the injected value (LWW: 1.00). Setting 1 (500 streams) gives the same picture (Appendix~\ref{app:tables}).}\label{tab:regime}
+\begin{tabular}{lrcccccccccc}
+\toprule
+Regime (latest report) & $n$ & LWW & valid & P0c world & P0c abst. & P0c wrong commit & P0cSU world & P0cSU abst. & P0cSU wrong commit & argmax & injected \\
+\midrule
+self-update (same origin, latest true) & 53 & 0.96 & 0.96 & 0.68 & 0.32 & 0.00 & 0.96 & 0.00 & 0.04 & 0.94 & -- \\
+multi-source update (latest true) & 854 & 0.92 & 0.92 & 0.71 & 0.24 & 0.04 & 0.73 & 0.23 & 0.05 & 0.85 & -- \\
+earlier report erroneous, latest true & 1427 & 0.92 & 0.90 & 0.56 & 0.41 & 0.04 & 0.57 & 0.39 & 0.04 & 0.84 & -- \\
+delayed report (latest true but older) & 75 & 0.12 & 0.32 & 0.11 & 0.63 & 0.27 & 0.13 & 0.59 & 0.28 & 0.35 & -- \\
+latest erroneous, low-trust source & 192 & 0.03 & 0.09 & 0.01 & 0.95 & 0.04 & 0.01 & 0.94 & 0.05 & 0.69 & -- \\
+latest erroneous, other source & 96 & 0.05 & 0.20 & 0.01 & 0.91 & 0.08 & 0.02 & 0.90 & 0.08 & 0.39 & -- \\
+latest report withdrawn & 242 & 0.51 & 0.52 & 0.35 & 0.31 & 0.34 & 0.35 & 0.29 & 0.35 & 0.47 & -- \\
+no conflict & 850 & 0.61 & 0.61 & 0.61 & 0.11 & 0.28 & 0.61 & 0.11 & 0.28 & 0.61 & -- \\
+latest report is an injection$^\dagger$ & 78 & 0.05 & 0.05 & 0.03 & 0.22 & 0.76 & -- & -- & -- & 0.20 & 0.78 \\
+\bottomrule
+\end{tabular}
+\end{sidewaystable}

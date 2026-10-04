@@ -1,0 +1,41 @@
+{
+  "stream_id": "alex_v1",
+  "meta": {"purpose": "SEMANTICS §10 worked case; the four queries of plan §1.1"},
+  "domain": {
+    "entities": ["alex", "london", "paris", "acme", "london_office"],
+    "attributes": {
+      "residence": {"type": "entity", "cardinality": "multi", "changeable": true, "error_allowed": true},
+      "commutes_to": {"type": "entity", "cardinality": "single", "changeable": true, "error_allowed": true},
+      "local_tax_city": {"type": "entity", "cardinality": "multi", "changeable": true, "error_allowed": false, "derived": true}
+    },
+    "rules": [
+      {"id": "r_tax", "kind": "strict", "head": ["local_tax_city", "?e", "?c"], "body": [["residence", "?e", "?c"]]}
+    ]
+  },
+  "sources": {
+    "s1": {"class": "standard", "origin": "g1"},
+    "s2": {"class": "standard", "origin": "g2"}
+  },
+  "observations": [
+    {"id": "o1", "t": 1, "source": "s1", "kind": "assert", "entity": "alex", "attr": "residence", "value": "london"},
+    {"id": "o2", "t": 2, "source": "s2", "kind": "assert", "entity": "alex", "attr": "residence", "value": "paris"}
+  ],
+  "queries": [
+    {"id": "q_move", "slot": "yesno", "tau": 2, "prop": {"kind": "changed", "entity": "alex", "attr": "residence", "from": "london", "to": "paris"},
+     "expect": "possible"},
+    {"id": "q_london_wrong", "slot": "yesno", "tau": 2, "prop": {"kind": "erroneous", "obs": "o1"},
+     "expect": "possible"},
+    {"id": "q_reported", "slot": "reported", "tau": 2, "entity": "alex", "attr": "residence",
+     "expect": "established"},
+    {"id": "q_tax_now", "slot": "downstream", "tau": 2, "entity": "alex", "attr": "local_tax_city", "tags": ["retraction_consequence"],
+     "expect": "unresolved"},
+    {"id": "q_current", "slot": "current", "tau": 2, "entity": "alex", "attr": "residence",
+     "expect": "unresolved"},
+    {"id": "q_current_tau1", "slot": "current", "tau": 1, "entity": "alex", "attr": "residence",
+     "expect": "established"},
+    {"id": "q_belief_asof_1", "slot": "belief_asof", "tau": 2, "tau_prime": 1, "entity": "alex", "attr": "residence",
+     "expect": "established"},
+    {"id": "q_holds_london_now", "slot": "yesno", "tau": 2, "prop": {"kind": "holds", "entity": "alex", "attr": "residence", "value": "london", "t": 2},
+     "expect": "possible"}
+  ]
+}

@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, the benchmark or the paper, please cite it as below."
+type: software
+title: "PALIMPSEST: Evaluating Retraction and Uncertainty in LLM Memory"
+authors:
+  - family-names: "Leiva Beltrán"
+    given-names: "Christian"
+    email: "chris@chrisgenai.com"
+version: "1.0"
+date-released: "2026-10-03"
+doi: "10.5281/zenodo.23127764"
+license: MIT
+repository-code: "https://github.com/OWNER/palimpsest"
+keywords:
+  - belief revision
+  - truth maintenance
+  - LLM memory
+  - agent memory
+  - retraction
+  - evidence withdrawal
+  - justified belief
+  - benchmark
+  - calibration
+  - bitemporal
+preferred-citation:
+  type: report
+  title: "PALIMPSEST: Evaluating Retraction and Uncertainty in LLM Memory"
+  authors:
+    - family-names: "Leiva Beltrán"
+      given-names: "Christian"
+  year: 2026
+  month: 10
+  doi: "10.5281/zenodo.23127764"
+  publisher:
+    name: "Zenodo"
+  notes: "Working paper, v1.0, not peer reviewed"

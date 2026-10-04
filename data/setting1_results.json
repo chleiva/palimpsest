@@ -1,0 +1,483 @@
+{
+ "summary": {
+  "palimpsest": {
+   "warranted_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "warranted_direct_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "resolvable_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "unresolved_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "commit_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "malformed_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reported_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_precision": [
+    0.9895749688495572,
+    0.9885057250610491,
+    0.9906232013318097
+   ],
+   "prov_recall": [
+    0.9932097665124611,
+    0.9923568607054387,
+    0.9940888984422899
+   ],
+   "n_warranted_per_stream": 7.416,
+   "n_warranted_direct_per_stream": 4.512,
+   "cost": {
+    "key_recomputes": 132.094,
+    "writes": 129.202,
+    "reads": 60.544,
+    "derived_refreshes": 192.362
+   },
+   "slot_acc": {
+    "asof": 1.0,
+    "belief_asof": 1.0,
+    "current": 1.0,
+    "downstream": 1.0,
+    "reported": 1.0,
+    "yesno_changed": 1.0,
+    "yesno_erroneous": 1.0,
+    "yesno_holds": 1.0
+   }
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": [
+    0.7943019550595308,
+    0.7756223742587378,
+    0.8128495746677565
+   ],
+   "warranted_direct_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "resolvable_acc": [
+    0.9327005947367042,
+    0.9265647097282688,
+    0.9387905142139314
+   ],
+   "unresolved_acc": [
+    0.9621865719248073,
+    0.95598858951506,
+    0.9680525939746528
+   ],
+   "commit_rate": [
+    0.002043745143745144,
+    0.0008993006993006993,
+    0.003384149184149184
+   ],
+   "unsupported_prop": [
+    0.017217841165736956,
+    0.012128441587359422,
+    0.022794217583796742
+   ],
+   "malformed_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reported_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_precision": [
+    0.9807782523363626,
+    0.9791394929246411,
+    0.982437150579126
+   ],
+   "prov_recall": [
+    0.9886285131706474,
+    0.9872947854992108,
+    0.9899698577321031
+   ],
+   "n_warranted_per_stream": 7.416,
+   "n_warranted_direct_per_stream": 4.512,
+   "cost": {
+    "key_recomputes": 132.094,
+    "writes": 129.202,
+    "reads": 60.544,
+    "derived_refreshes": 168.184
+   },
+   "slot_acc": {
+    "asof": 1.0,
+    "belief_asof": 1.0,
+    "current": 1.0,
+    "downstream": 0.8700563252802894,
+    "reported": 1.0,
+    "yesno_changed": 1.0,
+    "yesno_erroneous": 1.0,
+    "yesno_holds": 1.0
+   }
+  },
+  "palimpsest_commit": {
+   "warranted_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "warranted_direct_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "resolvable_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "unresolved_acc": [
+    0.04167975467944508,
+    0.03626373120343709,
+    0.04729156345890092
+   ],
+   "commit_rate": [
+    0.7761943510050321,
+    0.7624849122411816,
+    0.7890277746075735
+   ],
+   "unsupported_prop": [
+    0.09020024175334797,
+    0.07774755860928205,
+    0.10249944333110665
+   ],
+   "malformed_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reported_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_precision": [
+    0.9918776474068913,
+    0.9908803156658538,
+    0.9928679541749823
+   ],
+   "prov_recall": [
+    0.774914702160239,
+    0.769978448171933,
+    0.7800140425235703
+   ],
+   "n_warranted_per_stream": 7.416,
+   "n_warranted_direct_per_stream": 4.512,
+   "cost": {
+    "key_recomputes": 132.094,
+    "writes": 129.202,
+    "reads": 60.544,
+    "derived_refreshes": 192.362
+   },
+   "slot_acc": {
+    "asof": 0.7426703526598925,
+    "belief_asof": 0.808290273556231,
+    "current": 0.7233880674107455,
+    "downstream": 0.6639307170348683,
+    "reported": 1.0,
+    "yesno_changed": 0.9316109422492401,
+    "yesno_erroneous": 0.7042525773195877,
+    "yesno_holds": 0.8769342118398722
+   }
+  },
+  "log_query_time": {
+   "warranted_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "warranted_direct_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "resolvable_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "unresolved_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "commit_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "malformed_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reported_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_precision": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_recall": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "n_warranted_per_stream": 7.416,
+   "n_warranted_direct_per_stream": 4.512,
+   "cost": {
+    "key_recomputes": 124.26,
+    "writes": 0.0,
+    "reads": 60.544,
+    "log_scanned": 5363.29
+   },
+   "slot_acc": {
+    "asof": 1.0,
+    "belief_asof": 1.0,
+    "current": 1.0,
+    "downstream": 1.0,
+    "reported": 1.0,
+    "yesno_changed": 1.0,
+    "yesno_erroneous": 1.0,
+    "yesno_holds": 1.0
+   }
+  },
+  "temporal_db": {
+   "warranted_acc": [
+    0.8067083365568214,
+    0.7883174121052908,
+    0.8246206318933592
+   ],
+   "warranted_direct_acc": [
+    0.9085575786580812,
+    0.8946616197872479,
+    0.9218133415997738
+   ],
+   "resolvable_acc": [
+    0.907399214612001,
+    0.9001304891472613,
+    0.9146313128953981
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8479773904286289,
+    0.8354442717413305,
+    0.8594229130432691
+   ],
+   "unsupported_prop": [
+    0.1054410408117823,
+    0.09275217100868403,
+    0.11776091866272227
+   ],
+   "malformed_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reported_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_precision": [
+    0.9499197180276654,
+    0.9458741848253339,
+    0.9537810537956427
+   ],
+   "prov_recall": [
+    0.34104409689507853,
+    0.33260043596154604,
+    0.34908673468863943
+   ],
+   "n_warranted_per_stream": 7.416,
+   "n_warranted_direct_per_stream": 4.512,
+   "cost": {
+    "writes": 0.0,
+    "reads": 60.544
+   },
+   "slot_acc": {
+    "asof": 0.653207810320781,
+    "belief_asof": 0.7770694022289767,
+    "current": 0.6753284728944946,
+    "downstream": 0.5783860721467701,
+    "reported": 1.0,
+    "yesno_changed": 0.9194528875379939,
+    "yesno_erroneous": 0.000859106529209622,
+    "yesno_holds": 0.7712289108515523
+   }
+  },
+  "always_abstain": {
+   "warranted_acc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "warranted_direct_acc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "resolvable_acc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "unresolved_acc": [
+    0.39343419401376056,
+    0.37822564282123106,
+    0.4082752617695342
+   ],
+   "commit_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.07494288721743632,
+    0.06374668528977147,
+    0.08698124965660035
+   ],
+   "malformed_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reported_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_precision": [
+    0.5069704495378141,
+    0.49892525187516845,
+    0.5142204093142422
+   ],
+   "prov_recall": [
+    0.7386740719773766,
+    0.7318481052070024,
+    0.7455419659872248
+   ],
+   "n_warranted_per_stream": 7.416,
+   "n_warranted_direct_per_stream": 4.512,
+   "cost": {},
+   "slot_acc": {
+    "asof": 0.16786461446503287,
+    "belief_asof": 0.22261398176291794,
+    "current": 0.2420687948961943,
+    "downstream": 0.0002,
+    "reported": 1.0,
+    "yesno_changed": 0.06838905775075987,
+    "yesno_erroneous": 0.2957474226804124,
+    "yesno_holds": 0.22433363282419885
+   }
+  },
+  "always_commit": {
+   "warranted_acc": [
+    0.4384209169057654,
+    0.419440890198466,
+    0.457129481068875
+   ],
+   "warranted_direct_acc": [
+    0.9699857512671584,
+    0.9619266969769482,
+    0.9773708912528007
+   ],
+   "resolvable_acc": [
+    0.7702730146078642,
+    0.7609641914712006,
+    0.779417744303658
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7926945751187238,
+    0.7800645642798893,
+    0.8050235596962377
+   ],
+   "unsupported_prop": [
+    0.15742834876101408,
+    0.1427887521073894,
+    0.17258405700289467
+   ],
+   "malformed_rate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reported_acc": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "prov_precision": [
+    0.9388756155073595,
+    0.9341166687207703,
+    0.9432858678774846
+   ],
+   "prov_recall": [
+    0.28437846956494683,
+    0.2769468447026911,
+    0.2915948737751624
+   ],
+   "n_warranted_per_stream": 7.416,
+   "n_warranted_direct_per_stream": 4.512,
+   "cost": {},
+   "slot_acc": {
+    "asof": 0.6378138075313807,
+    "belief_asof": 0.7820795339412361,
+    "current": 0.7009268837543605,
+    "downstream": 0.2958504993483954,
+    "reported": 1.0,
+    "yesno_changed": 0.918693009118541,
+    "yesno_erroneous": 0.000859106529209622,
+    "yesno_holds": 0.7335754217829689
+   }
+  }
+ },
+ "n_streams": 500
+}

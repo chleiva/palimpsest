@@ -1,0 +1,267 @@
+{
+  "stream_id": "birthdate_v1",
+  "meta": {
+    "purpose": "stable (non-changeable) attribute: dispute forces error hypotheses; a correction cue forces the corrected report ERR when the correction is accepted but the correction itself may be ERR, so the dispute stays unresolved under policy P0; a low-trust re-dispute likewise; nickname declares competing_values=false so two nicknames coexist; correlated sources share an origin; citizenship: a self-correction (same origin) withdraws the earlier report (A-SELF) and resolves, a later cross-origin low-trust report reopens the dispute under P0 but not under P1"
+  },
+  "domain": {
+    "entities": [
+      "ravi",
+      "india",
+      "nepal"
+    ],
+    "attributes": {
+      "birth_date": {
+        "type": "date",
+        "cardinality": "single",
+        "changeable": false,
+        "error_allowed": true
+      },
+      "nickname": {
+        "type": "string",
+        "cardinality": "multi",
+        "changeable": false,
+        "error_allowed": true,
+        "competing_values": false
+      },
+      "citizenship": {
+        "type": "entity",
+        "cardinality": "single",
+        "changeable": false,
+        "error_allowed": true
+      }
+    },
+    "rules": []
+  },
+  "sources": {
+    "wiki": {
+      "class": "standard",
+      "origin": "g_wiki"
+    },
+    "mirror": {
+      "class": "standard",
+      "origin": "g_wiki"
+    },
+    "registry": {
+      "class": "trusted",
+      "origin": "g_registry"
+    },
+    "forum": {
+      "class": "low",
+      "origin": "g_forum"
+    }
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "t": 1,
+      "source": "wiki",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "birth_date",
+      "value": "1990-03-04"
+    },
+    {
+      "id": "o2",
+      "t": 2,
+      "source": "mirror",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "birth_date",
+      "value": "1990-03-04"
+    },
+    {
+      "id": "o3",
+      "t": 3,
+      "source": "registry",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "birth_date",
+      "value": "1990-04-03"
+    },
+    {
+      "id": "o4",
+      "t": 4,
+      "source": "registry",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "birth_date",
+      "value": "1990-04-03",
+      "op_cue": "correction",
+      "op_of": "o1"
+    },
+    {
+      "id": "o5",
+      "t": 5,
+      "source": "forum",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "nickname",
+      "value": "rav"
+    },
+    {
+      "id": "o6",
+      "t": 6,
+      "source": "forum",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "nickname",
+      "value": "ravs"
+    },
+    {
+      "id": "o7",
+      "t": 7,
+      "source": "forum",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "birth_date",
+      "value": "1990-03-04"
+    },
+    {
+      "id": "o9",
+      "t": 9,
+      "source": "wiki",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "citizenship",
+      "value": "india"
+    },
+    {
+      "id": "o10",
+      "t": 10,
+      "source": "wiki",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "citizenship",
+      "value": "nepal",
+      "op_cue": "correction",
+      "op_of": "o9"
+    },
+    {
+      "id": "o11",
+      "t": 11,
+      "source": "forum",
+      "kind": "assert",
+      "entity": "ravi",
+      "attr": "citizenship",
+      "value": "india"
+    }
+  ],
+  "queries": [
+    {
+      "id": "q_bd_t2",
+      "slot": "current",
+      "tau": 2,
+      "entity": "ravi",
+      "attr": "birth_date",
+      "expect": "established",
+      "expect_value": "1990-03-04"
+    },
+    {
+      "id": "q_bd_t3",
+      "slot": "current",
+      "tau": 3,
+      "entity": "ravi",
+      "attr": "birth_date",
+      "expect": "unresolved"
+    },
+    {
+      "id": "q_o1_err_t3",
+      "slot": "yesno",
+      "tau": 3,
+      "prop": {
+        "kind": "erroneous",
+        "obs": "o1"
+      },
+      "expect": "possible"
+    },
+    {
+      "id": "q_bd_t4",
+      "slot": "current",
+      "tau": 4,
+      "entity": "ravi",
+      "attr": "birth_date",
+      "expect": "unresolved"
+    },
+    {
+      "id": "q_o1_err_t4",
+      "slot": "yesno",
+      "tau": 4,
+      "prop": {
+        "kind": "erroneous",
+        "obs": "o1"
+      },
+      "expect": "possible"
+    },
+    {
+      "id": "q_nick_t6",
+      "slot": "current",
+      "tau": 6,
+      "entity": "ravi",
+      "attr": "nickname",
+      "expect": "established"
+    },
+    {
+      "id": "q_bd_t7",
+      "slot": "current",
+      "tau": 7,
+      "entity": "ravi",
+      "attr": "birth_date",
+      "expect": "unresolved"
+    },
+    {
+      "id": "q_reported_t7",
+      "slot": "reported",
+      "tau": 7,
+      "entity": "ravi",
+      "attr": "birth_date",
+      "expect": "established"
+    },
+    {
+      "id": "q_cit_t9",
+      "slot": "current",
+      "tau": 9,
+      "entity": "ravi",
+      "attr": "citizenship",
+      "expect": "established",
+      "expect_value": "india"
+    },
+    {
+      "id": "q_cit_t10",
+      "slot": "current",
+      "tau": 10,
+      "entity": "ravi",
+      "attr": "citizenship",
+      "tags": [
+        "retraction_consequence"
+      ],
+      "expect": "established",
+      "expect_value": "nepal"
+    },
+    {
+      "id": "q_o9_err_t10",
+      "slot": "yesno",
+      "tau": 10,
+      "prop": {
+        "kind": "erroneous",
+        "obs": "o9"
+      },
+      "expect": "unknown"
+    },
+    {
+      "id": "q_cit_reported_t10",
+      "slot": "reported",
+      "tau": 10,
+      "entity": "ravi",
+      "attr": "citizenship",
+      "expect": "established"
+    },
+    {
+      "id": "q_cit_t11",
+      "slot": "current",
+      "tau": 11,
+      "entity": "ravi",
+      "attr": "citizenship",
+      "expect": "unresolved"
+    }
+  ]
+}

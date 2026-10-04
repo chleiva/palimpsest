@@ -1,0 +1,1562 @@
+[
+ {
+  "kind": "slot_error",
+  "rate": 0.0,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 1.0,
+   "resolvable_acc": 1.0,
+   "unresolved_acc": 1.0,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.0
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    1.0,
+    1.0
+   ],
+   "resolvable_acc": [
+    1.0,
+    1.0
+   ],
+   "unresolved_acc": [
+    1.0,
+    1.0
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.0,
+    0.0
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.801072748446698,
+   "resolvable_acc": 0.9448275531836433,
+   "unresolved_acc": 0.9739288489288489,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.027999999999999997
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.7365974161892529,
+    0.8591157092207513
+   ],
+   "resolvable_acc": [
+    0.9285510157148089,
+    0.9602337097408009
+   ],
+   "unresolved_acc": [
+    0.9592143412143411,
+    0.9866262626262626
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.006500000000000001,
+    0.0555
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7987435133893717,
+   "resolvable_acc": 0.9175867122989482,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8599939162145044,
+   "unsupported_prop": 0.054841269841269843
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.7313515566066586,
+    0.8538971132908708
+   ],
+   "resolvable_acc": [
+    0.894240562601408,
+    0.9391687265696443
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8151724909077851,
+    0.9026091800356507
+   ],
+   "unsupported_prop": [
+    0.024285714285714285,
+    0.09023809523809524
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7943888713234566,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7629685904274439,
+    0.8234437815370431
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ },
+ {
+  "kind": "slot_error",
+  "rate": 0.05,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.036058912219660594,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.8779940331110799,
+   "resolvable_acc": 0.9097814120761967,
+   "unresolved_acc": 0.8579783925225102,
+   "commit_rate": 0.01575,
+   "unsupported_prop": 0.08161904761904762
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.8216917719468739,
+    0.9245821705305498
+   ],
+   "resolvable_acc": [
+    0.8882728992997779,
+    0.9296212341474619
+   ],
+   "unresolved_acc": [
+    0.8143754937872585,
+    0.9013103905898023
+   ],
+   "commit_rate": [
+    0.005416666666666666,
+    0.02875
+   ],
+   "unsupported_prop": [
+    0.041095238095238094,
+    0.12538095238095237
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.7061488264969658,
+   "resolvable_acc": 0.8602336968500888,
+   "unresolved_acc": 0.8305019800460977,
+   "commit_rate": 0.01575,
+   "unsupported_prop": 0.10211904761904762
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.6331894296180011,
+    0.7739816306142837
+   ],
+   "resolvable_acc": [
+    0.8344494102707829,
+    0.8845297007218617
+   ],
+   "unresolved_acc": [
+    0.7838028735969913,
+    0.8742915091444503
+   ],
+   "commit_rate": [
+    0.005416666666666666,
+    0.02875
+   ],
+   "unsupported_prop": [
+    0.057738095238095234,
+    0.1518809523809524
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7381992957022969,
+   "resolvable_acc": 0.86081688147126,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8582780928222106,
+   "unsupported_prop": 0.11174603174603175
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.6615679288698496,
+    0.8052526555077576
+   ],
+   "resolvable_acc": [
+    0.8323603299820305,
+    0.886993276441701
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8131377217553688,
+    0.9013119609149021
+   ],
+   "unsupported_prop": [
+    0.06114285714285714,
+    0.17044444444444445
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.4039046087965656,
+   "resolvable_acc": 0.7518731232416842,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.18903174603174602
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.35354912527781673,
+    0.450591482014051
+   ],
+   "resolvable_acc": [
+    0.7198245756938846,
+    0.7824498942491809
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.133,
+    0.24976984126984128
+   ]
+  }
+ },
+ {
+  "kind": "slot_error",
+  "rate": 0.1,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.07249168201316585,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.6581929308519945,
+   "resolvable_acc": 0.8141313106291678,
+   "unresolved_acc": 0.6849996621026032,
+   "commit_rate": 0.024907239819004525,
+   "unsupported_prop": 0.0998095238095238
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.583858543417367,
+    0.7347354742762906
+   ],
+   "resolvable_acc": [
+    0.7803309820583136,
+    0.8479583404651475
+   ],
+   "unresolved_acc": [
+    0.6246826408885232,
+    0.7426745133951016
+   ],
+   "commit_rate": [
+    0.005686274509803921,
+    0.050333333333333334
+   ],
+   "unsupported_prop": [
+    0.06166666666666667,
+    0.14109523809523808
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.5189593186591986,
+   "resolvable_acc": 0.7758394397523414,
+   "unresolved_acc": 0.6688565829595241,
+   "commit_rate": 0.024907239819004525,
+   "unsupported_prop": 0.08664285714285715
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.4463211291842744,
+    0.5893797995388632
+   ],
+   "resolvable_acc": [
+    0.7402541852448562,
+    0.8099301882219113
+   ],
+   "unresolved_acc": [
+    0.6125458348840701,
+    0.721364070569953
+   ],
+   "commit_rate": [
+    0.005686274509803921,
+    0.050333333333333334
+   ],
+   "unsupported_prop": [
+    0.05152380952380952,
+    0.12459523809523809
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.6248824971213927,
+   "resolvable_acc": 0.8189762648365803,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8584177228000758,
+   "unsupported_prop": 0.09867460317460316
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.5442294666784463,
+    0.7021583858318552
+   ],
+   "resolvable_acc": [
+    0.7860708139654191,
+    0.8482108366292578
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8218563005621828,
+    0.8966760494407553
+   ],
+   "unsupported_prop": [
+    0.05743650793650794,
+    0.14319841269841269
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.3536966684775808,
+   "resolvable_acc": 0.7297604210444762,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8093378337348924,
+   "unsupported_prop": 0.19841269841269843
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3077814409146942,
+    0.3960758062798879
+   ],
+   "resolvable_acc": [
+    0.6971615415912321,
+    0.7601461471468425
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7738093018093017,
+    0.8433730811671988
+   ],
+   "unsupported_prop": [
+    0.1437857142857143,
+    0.2567063492063492
+   ]
+  }
+ },
+ {
+  "kind": "slot_error",
+  "rate": 0.2,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.15549059279321267,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.4487488668461057,
+   "resolvable_acc": 0.6517650468672592,
+   "unresolved_acc": 0.5153120964003317,
+   "commit_rate": 0.037778562940327644,
+   "unsupported_prop": 0.21103174603174604
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.37932720707330553,
+    0.5185688994212404
+   ],
+   "resolvable_acc": [
+    0.615392998242025,
+    0.6911109136592151
+   ],
+   "unresolved_acc": [
+    0.4568170718170718,
+    0.5734879956644662
+   ],
+   "commit_rate": [
+    0.020903679653679653,
+    0.055473007384772094
+   ],
+   "unsupported_prop": [
+    0.1568253968253968,
+    0.2663412698412698
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.3318832494702843,
+   "resolvable_acc": 0.6190495856918424,
+   "unresolved_acc": 0.5124652569652569,
+   "commit_rate": 0.037778562940327644,
+   "unsupported_prop": 0.16530158730158728
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.2651822633815431,
+    0.4004231562754972
+   ],
+   "resolvable_acc": [
+    0.581702896271853,
+    0.658566508257597
+   ],
+   "unresolved_acc": [
+    0.4538605805958747,
+    0.5699173669467786
+   ],
+   "commit_rate": [
+    0.020903679653679653,
+    0.055473007384772094
+   ],
+   "unsupported_prop": [
+    0.11809523809523809,
+    0.21708730158730158
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.38756728465612017,
+   "resolvable_acc": 0.671385252521748,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8367249988573517,
+   "unsupported_prop": 0.19540476190476191
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.3208445282875055,
+    0.4561436396070249
+   ],
+   "resolvable_acc": [
+    0.6328402244286838,
+    0.7102924344188566
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.789113327848622,
+    0.8823540919864449
+   ],
+   "unsupported_prop": [
+    0.14154761904761906,
+    0.25433333333333336
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.25662734624319256,
+   "resolvable_acc": 0.6405133492966888,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.2558809523809524
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.2141912392662693,
+    0.2977195640160826
+   ],
+   "resolvable_acc": [
+    0.6059459963106061,
+    0.6742353611021382
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.19995238095238094,
+    0.31492857142857145
+   ]
+  }
+ },
+ {
+  "kind": "slot_error",
+  "rate": 0.35,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.26824234490820326,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.2731849866153588,
+   "resolvable_acc": 0.5106684463801836,
+   "unresolved_acc": 0.3468167894197306,
+   "commit_rate": 0.05862925309984133,
+   "unsupported_prop": 0.24918253968253967
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.20436449304996726,
+    0.3498854486849685
+   ],
+   "resolvable_acc": [
+    0.4716213938724804,
+    0.5512966599372899
+   ],
+   "unresolved_acc": [
+    0.30025209920798157,
+    0.3949905290787644
+   ],
+   "commit_rate": [
+    0.03526776165011459,
+    0.08392793481028775
+   ],
+   "unsupported_prop": [
+    0.18584126984126986,
+    0.31332539682539684
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.1921190004473318,
+   "resolvable_acc": 0.4906903202855392,
+   "unresolved_acc": 0.3412783278812691,
+   "commit_rate": 0.05862925309984133,
+   "unsupported_prop": 0.21115079365079364
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.133576049467406,
+    0.2584352239064124
+   ],
+   "resolvable_acc": [
+    0.45118873592830766,
+    0.5308790653218649
+   ],
+   "unresolved_acc": [
+    0.2951091131091131,
+    0.38889901764901763
+   ],
+   "commit_rate": [
+    0.03526776165011459,
+    0.08392793481028775
+   ],
+   "unsupported_prop": [
+    0.14865079365079364,
+    0.27580158730158727
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.30103958666383634,
+   "resolvable_acc": 0.5632623528521067,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.804196475093534,
+   "unsupported_prop": 0.2486904761904762
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.2290066026410564,
+    0.3818907083312846
+   ],
+   "resolvable_acc": [
+    0.5246298416914935,
+    0.6015350022149009
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7561456386750504,
+    0.85042067246479
+   ],
+   "unsupported_prop": [
+    0.18730952380952381,
+    0.3179285714285714
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.22395782488819704,
+   "resolvable_acc": 0.5572563160726599,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8093378337348924,
+   "unsupported_prop": 0.2440952380952381
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.17827369042855237,
+    0.2711314562455019
+   ],
+   "resolvable_acc": [
+    0.5247031093662673,
+    0.5902181486896371
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7738093018093017,
+    0.8433730811671988
+   ],
+   "unsupported_prop": [
+    0.18304761904761904,
+    0.3086190476190476
+   ]
+  }
+ },
+ {
+  "kind": "missed_cue",
+  "rate": 0.1,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.020045573988884423,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.9124020820449392,
+   "resolvable_acc": 0.9458618457718821,
+   "unresolved_acc": 0.9577604617604618,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.01633333333333333
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.8617063492063493,
+    0.9554164089878375
+   ],
+   "resolvable_acc": [
+    0.9248425869652036,
+    0.9648674002909082
+   ],
+   "unresolved_acc": [
+    0.932141414141414,
+    0.9806666666666666
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.003333333333333333,
+    0.033666666666666664
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.7134748304916372,
+   "resolvable_acc": 0.8906893989555255,
+   "unresolved_acc": 0.9375074925074925,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.044333333333333336
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.6456235774363025,
+    0.7799642367769618
+   ],
+   "resolvable_acc": [
+    0.8655312406409386,
+    0.9147772513706982
+   ],
+   "unresolved_acc": [
+    0.9097035187035187,
+    0.9634596514596515
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.018500000000000003,
+    0.0755
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7973829691716847,
+   "resolvable_acc": 0.9152303904598676,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8599939162145044,
+   "unsupported_prop": 0.054841269841269843
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.731157193146989,
+    0.8530733722060253
+   ],
+   "resolvable_acc": [
+    0.8925714535680609,
+    0.9368957249019263
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8151724909077851,
+    0.9026091800356507
+   ],
+   "unsupported_prop": [
+    0.024285714285714285,
+    0.09023809523809524
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7943888713234566,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7629685904274439,
+    0.8234437815370431
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ },
+ {
+  "kind": "missed_cue",
+  "rate": 0.25,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.04748698163351051,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.8170589814347318,
+   "resolvable_acc": 0.8665092130142823,
+   "unresolved_acc": 0.8726580510992276,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.04404761904761905
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.7550670418017357,
+    0.8781339608770581
+   ],
+   "resolvable_acc": [
+    0.8331132561412083,
+    0.8966864856027259
+   ],
+   "unresolved_acc": [
+    0.8324351073762838,
+    0.9132119938884645
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.018214285714285714,
+    0.07619047619047618
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.6240841108338107,
+   "resolvable_acc": 0.8129428268039862,
+   "unresolved_acc": 0.8544050818462583,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.06804761904761905
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.5523301528403569,
+    0.6961498602104844
+   ],
+   "resolvable_acc": [
+    0.7801010436024413,
+    0.8426766722904735
+   ],
+   "unresolved_acc": [
+    0.8141367162249515,
+    0.8956489164430341
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.03735714285714286,
+    0.10266666666666667
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7936314685714445,
+   "resolvable_acc": 0.9114931162398348,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8599939162145044,
+   "unsupported_prop": 0.054841269841269843
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.7277290036893879,
+    0.8492110080795555
+   ],
+   "resolvable_acc": [
+    0.8892533782752081,
+    0.9331850862316935
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8151724909077851,
+    0.9026091800356507
+   ],
+   "unsupported_prop": [
+    0.024285714285714285,
+    0.09023809523809524
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7936992161510428,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7626598706601766,
+    0.8232173232324423
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ },
+ {
+  "kind": "missed_cue",
+  "rate": 0.5,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.09591751026400538,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.5620458523069567,
+   "resolvable_acc": 0.7115529771946865,
+   "unresolved_acc": 0.7532419933008169,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.08871428571428572
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.48900506089881846,
+    0.6334849957298937
+   ],
+   "resolvable_acc": [
+    0.6784494247024412,
+    0.7423130250650791
+   ],
+   "unresolved_acc": [
+    0.6977884958179075,
+    0.8070092064797947
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.05057142857142857,
+    0.13028571428571428
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.3823848786934021,
+   "resolvable_acc": 0.6602367506267913,
+   "unresolved_acc": 0.7367093037681274,
+   "commit_rate": 0.0,
+   "unsupported_prop": 0.09752380952380951
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.3161680439741664,
+    0.4538652690513435
+   ],
+   "resolvable_acc": [
+    0.6284142155922189,
+    0.6911219476913243
+   ],
+   "unresolved_acc": [
+    0.6809745711804536,
+    0.7908802994391231
+   ],
+   "commit_rate": [
+    0.0,
+    0.0
+   ],
+   "unsupported_prop": [
+    0.06242857142857143,
+    0.13554761904761903
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7576661300550857,
+   "resolvable_acc": 0.8916599475902415,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8599939162145044,
+   "unsupported_prop": 0.05734126984126984
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.6908171060632045,
+    0.8158295785846805
+   ],
+   "resolvable_acc": [
+    0.8675961306799738,
+    0.9146964430438671
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8151724909077851,
+    0.9026091800356507
+   ],
+   "unsupported_prop": [
+    0.026547619047619046,
+    0.09269841269841268
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7936992161510428,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7626598706601766,
+    0.8232173232324423
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ },
+ {
+  "kind": "spurious_cue",
+  "rate": 0.05,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.030745977598217004,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 1.0,
+   "resolvable_acc": 1.0,
+   "unresolved_acc": 0.9633070328364446,
+   "commit_rate": 0.009655971479500891,
+   "unsupported_prop": 0.007301587301587301
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    1.0,
+    1.0
+   ],
+   "resolvable_acc": [
+    1.0,
+    1.0
+   ],
+   "unresolved_acc": [
+    0.9379876855170973,
+    0.9840289775583894
+   ],
+   "commit_rate": [
+    0.0016666666666666666,
+    0.02018181818181818
+   ],
+   "unsupported_prop": [
+    0.0,
+    0.019047619047619046
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.801072748446698,
+   "resolvable_acc": 0.9448275531836433,
+   "unresolved_acc": 0.9325605570899689,
+   "commit_rate": 0.009655971479500891,
+   "unsupported_prop": 0.036444444444444446
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.7365974161892529,
+    0.8591157092207513
+   ],
+   "resolvable_acc": [
+    0.9285510157148089,
+    0.9602337097408009
+   ],
+   "unresolved_acc": [
+    0.9006540126540127,
+    0.9596859349800526
+   ],
+   "commit_rate": [
+    0.0016666666666666666,
+    0.02018181818181818
+   ],
+   "unsupported_prop": [
+    0.010944444444444446,
+    0.06733333333333333
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7987435133893717,
+   "resolvable_acc": 0.9175867122989482,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8599939162145044,
+   "unsupported_prop": 0.054841269841269843
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.7313515566066586,
+    0.8538971132908708
+   ],
+   "resolvable_acc": [
+    0.894240562601408,
+    0.9391687265696443
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8151724909077851,
+    0.9026091800356507
+   ],
+   "unsupported_prop": [
+    0.024285714285714285,
+    0.09023809523809524
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7943888713234566,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7629685904274439,
+    0.8234437815370431
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ },
+ {
+  "kind": "spurious_cue",
+  "rate": 0.15,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.0915776829642065,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.0,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 1.0,
+   "resolvable_acc": 1.0,
+   "unresolved_acc": 0.8705759958995253,
+   "commit_rate": 0.04775444490150373,
+   "unsupported_prop": 0.01968253968253968
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    1.0,
+    1.0
+   ],
+   "resolvable_acc": [
+    1.0,
+    1.0
+   ],
+   "unresolved_acc": [
+    0.8155328299151828,
+    0.9180182954300601
+   ],
+   "commit_rate": [
+    0.02056698203757027,
+    0.08704529457470635
+   ],
+   "unsupported_prop": [
+    0.002857142857142857,
+    0.04126984126984126
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.8146781906235688,
+   "resolvable_acc": 0.9477394305782794,
+   "unresolved_acc": 0.8432840656075951,
+   "commit_rate": 0.047936263083321905,
+   "unsupported_prop": 0.04434920634920635
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.7494723647034571,
+    0.8720587802220455
+   ],
+   "resolvable_acc": [
+    0.9314775059787574,
+    0.9629580105399071
+   ],
+   "unresolved_acc": [
+    0.784390909743851,
+    0.8945901157665864
+   ],
+   "commit_rate": [
+    0.019393162393162394,
+    0.08806371406371406
+   ],
+   "unsupported_prop": [
+    0.019404761904761904,
+    0.07583333333333334
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7987435133893717,
+   "resolvable_acc": 0.9175867122989482,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8599939162145044,
+   "unsupported_prop": 0.054841269841269843
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.7313515566066586,
+    0.8538971132908708
+   ],
+   "resolvable_acc": [
+    0.894240562601408,
+    0.9391687265696443
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8151724909077851,
+    0.9026091800356507
+   ],
+   "unsupported_prop": [
+    0.024285714285714285,
+    0.09023809523809524
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7943888713234566,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7629685904274439,
+    0.8234437815370431
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ },
+ {
+  "kind": "missed_valid",
+  "rate": 0.25,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.10121585263056711,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.9948979591836735,
+   "resolvable_acc": 0.995,
+   "unresolved_acc": 0.973117679705915,
+   "commit_rate": 0.006213786213786214,
+   "unsupported_prop": 0.013523809523809525
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.9846938775510204,
+    1.0
+   ],
+   "resolvable_acc": [
+    0.987,
+    1.0
+   ],
+   "unresolved_acc": [
+    0.95595337995338,
+    0.9879206349206349
+   ],
+   "commit_rate": [
+    0.0,
+    0.014785214785214783
+   ],
+   "unsupported_prop": [
+    0.0,
+    0.031619047619047616
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.7980115239569021,
+   "resolvable_acc": 0.9406608865169767,
+   "unresolved_acc": 0.949046528634764,
+   "commit_rate": 0.006213786213786214,
+   "unsupported_prop": 0.041523809523809525
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.7331817392291582,
+    0.8567222126946017
+   ],
+   "resolvable_acc": [
+    0.9222522993063872,
+    0.9578677055342796
+   ],
+   "unresolved_acc": [
+    0.9254445750328104,
+    0.9703795093795093
+   ],
+   "commit_rate": [
+    0.0,
+    0.014785214785214783
+   ],
+   "unsupported_prop": [
+    0.0155,
+    0.07283333333333333
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.7936414725730452,
+   "resolvable_acc": 0.9135867122989481,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8467312899518782,
+   "unsupported_prop": 0.06431746031746031
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.7263823711302703,
+    0.850119008642418
+   ],
+   "resolvable_acc": [
+    0.889784267023505,
+    0.9365072845098708
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8000779008573126,
+    0.8916605126899245
+   ],
+   "unsupported_prop": [
+    0.03357142857142857,
+    0.09815079365079366
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7943888713234566,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7629685904274439,
+    0.8234437815370431
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ },
+ {
+  "kind": "missed_valid",
+  "rate": 0.5,
+  "extraction": {
+   "n": 132.36,
+   "failed": 0.0,
+   "kind_error": 0.0,
+   "slot_error_rate": 0.0,
+   "missed_ambiguity_rate": 0.0,
+   "spurious_ambiguity_rate": 0.0,
+   "valid_cue_error_rate": 0.19995506234129373,
+   "failure_rate": 0.0
+  },
+  "palimpsest": {
+   "warranted_acc": 0.9908163265306121,
+   "resolvable_acc": 0.9900450216450217,
+   "unresolved_acc": 0.9608795844678198,
+   "commit_rate": 0.010737595737595737,
+   "unsupported_prop": 0.02552380952380952
+  },
+  "palimpsest_ci": {
+   "warranted_acc": [
+    0.976530612244898,
+    1.0
+   ],
+   "resolvable_acc": [
+    0.9804329004329004,
+    0.9975757575757576
+   ],
+   "unresolved_acc": [
+    0.9359673855556209,
+    0.9803050674815381
+   ],
+   "commit_rate": [
+    0.002857142857142857,
+    0.02112720612720613
+   ],
+   "unsupported_prop": [
+    0.005714285714285714,
+    0.05085714285714285
+   ]
+  },
+  "palimpsest_noprop": {
+   "warranted_acc": 0.7939298913038408,
+   "resolvable_acc": 0.9357059081619983,
+   "unresolved_acc": 0.9348084333966687,
+   "commit_rate": 0.010737595737595737,
+   "unsupported_prop": 0.05352380952380953
+  },
+  "palimpsest_noprop_ci": {
+   "warranted_acc": [
+    0.726846849295829,
+    0.8535734673489775
+   ],
+   "resolvable_acc": [
+    0.9166532731471553,
+    0.9533973585718859
+   ],
+   "unresolved_acc": [
+    0.9072056832056832,
+    0.9593326673326673
+   ],
+   "commit_rate": [
+    0.002857142857142857,
+    0.02112720612720613
+   ],
+   "unsupported_prop": [
+    0.0235,
+    0.08904761904761906
+   ]
+  },
+  "temporal_db": {
+   "warranted_acc": 0.789559839919984,
+   "resolvable_acc": 0.9092377945500304,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8563272495478378,
+   "unsupported_prop": 0.06881746031746032
+  },
+  "temporal_db_ci": {
+   "warranted_acc": [
+    0.7225455666782197,
+    0.8437327128653659
+   ],
+   "resolvable_acc": [
+    0.8854470705879216,
+    0.9321678169006867
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.8101335870012341,
+    0.9002457379222085
+   ],
+   "unsupported_prop": [
+    0.03669047619047619,
+    0.10548412698412699
+   ]
+  },
+  "always_commit": {
+   "warranted_acc": 0.42329236389860636,
+   "resolvable_acc": 0.7943888713234566,
+   "unresolved_acc": 0.0,
+   "commit_rate": 0.8064806908777498,
+   "unsupported_prop": 0.16167460317460317
+  },
+  "always_commit_ci": {
+   "warranted_acc": [
+    0.3704493652272764,
+    0.47215305536133867
+   ],
+   "resolvable_acc": [
+    0.7629685904274439,
+    0.8234437815370431
+   ],
+   "unresolved_acc": [
+    0.0,
+    0.0
+   ],
+   "commit_rate": [
+    0.7709951535392712,
+    0.8415646706234942
+   ],
+   "unsupported_prop": [
+    0.11113492063492064,
+    0.22054761904761905
+   ]
+  }
+ }
+]

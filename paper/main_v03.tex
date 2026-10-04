@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,xcolor,hyperref,natbib,microtype}
+\usepackage{times}
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
+\newcommand{\pal}{\textsc{Palimpsest}}
+\newcommand{\rs}{\textsc{Revise-Stream}}
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+\input{tables/numbers}
+
+\title{\pal: Accountable Belief Revision for LLM Systems\\
+\large When does write-time justification maintenance beat query-time adjudication?}
+\author{Christian Leiva Beltr\'an\thanks{Research design, semantics and experiments were developed with AI assistance (Claude); the author reviewed and takes responsibility for the content. Code, data generators, prompts, cost ledgers and the pre-registration are released with the paper.}}
+\date{3 October 2026 --- preprint, v0.3 draft}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+LLM systems that persist knowledge must revise it when observations conflict, arrive late, come from unreliable sources, or are withdrawn. We study one capability such systems lack: propagating the \emph{retraction} of evidence through the justifications of the conclusions that depended on it, while refusing to commit to a revision the evidence does not determine. We give a declared semantics of \emph{justified belief} for streams of observations (an assumption-based truth-maintenance oracle over a small claim language with explicit operator cues, dispute and withdrawal), a benchmark generator, \rs, that separates the world, the observations, and the beliefs those observations justify, and a representation-neutral output contract under which every system---including an append-only evidence log with query-time adjudication---is scored for preserving or prematurely resolving uncertainty. \pal{} is a write-time belief store whose derived beliefs pin the versions of the evidence that justified them; it is compared with query-time adjudication and with ablations at matched cost. In the structured setting (500 streams, no LLM) the store reproduces the oracle exactly, removing retraction propagation costs \sOnePropEffect{} points [\sOnePropLo, \sOnePropHi] on warranted downstream queries and nothing on direct ones, and a forced-commitment variant raises unsupported propagation by \sOneCommitUnsup{} points [\sOneCommitUnsupLo, \sOneCommitUnsupHi] without losing resolvable accuracy; a learned-prior evidence model is better calibrated than class priors alone (ECE \RqLearnedEce{} vs.\ \RqPriorEce) but worse than a logistic regression over the same evidence features (\RqLogregEce); an explicit attacker model shows that cue resolution creates an attack surface that provenance alone does not close. In the natural-language setting (100 streams, claims extracted by Claude Haiku 4.5 with a 1.5\% slot-error rate), \pal{} over the extracted claims scores \sTwoPalWarr{} on warranted downstream queries against \sTwoLogWarr{} for the same claims adjudicated by the LLM at query time, a paired difference of \sTwoHOne{} points [\sTwoHOneLo, \sTwoHOneHi], while committing on \sTwoPalCommit{} of unresolved slots against \sTwoLogCommit, at a third of the LLM cost; the sign holds with Claude Sonnet 4.6 (+\sStrongHOne{} points). Two pre-registered hypotheses fail: the evidence model's support is less well calibrated than the adjudicator's own confidence on extracted claims, and a controlled corruption curve shows justified-belief maintenance degrading faster than last-write-wins as extraction errors grow, because every extraction error becomes a standing dispute. On 30 streams assembled from Wikidata revision histories (pseudonymised, with the editors' deprecations as withdrawals) the propagation effect transfers ($+\sThreeProp$ points) and \pal{} matches the rule-based ceiling; the LLM adjudicator's gap there is decomposed into two output conventions and a conflict between its priors and the declared schema. On LongMemEval's knowledge updates, which score the latest self-report as truth, the semantics' refusal to assume recency costs it most of its coverage, which we report as a mismatch of scoring targets. We report the pre-registered hypotheses, every negative result, and measured costs (\$\spendTotal{} in total).
+\end{abstract}
+
+\section{Introduction}
+Memory for LLM agents is usually built as retrieval over an append-only store, with an LLM adjudicating conflicts at query time. This works until the evidence itself changes: a source is withdrawn, an earlier report is corrected, a change is reported late. On the STALE benchmark most memory frameworks score below 10\% on implicit memory conflicts and the best standalone model reaches 55.2\% \citep{stale2026}; knowledge editors update a target fact but not its consequences \citep{rippleedits}; and finetuning on new facts erodes prior knowledge. The question we ask is narrower than ``how should agents learn continually'' and, we argue, prior to it: \emph{when evidence is withdrawn or corrected, which conclusions should lose support, and does maintaining that structure at write time earn its cost over re-deriving everything at query time?}
+
+Two design commitments shape the study. First, systems are scored against \emph{justified} belief, not against the world: an agent that believes a true thing for no good reason is not rewarded, and an agent that holds two readings open when the evidence does not decide between them receives full credit. This requires a reference reasoner that sees only the observations and the declared assumptions and never the world, and that retains alternative interpretations rather than selecting one (\S\ref{sec:semantics}). Second, the requirement to preserve uncertainty is placed on observable behaviour through a shared output contract (\S\ref{sec:contract}), so that an append-only log adjudicated by an LLM competes on equal terms with a store that represents hypotheses explicitly.
+
+Our contributions are: (1) a declared, total semantics of justified belief for observation streams with operator cues, dispute, correction and withdrawal, implemented by two independent oracles that agree on every generated stream; (2) \rs, a generator with a perturbation menu (delays, unknown change dates, reversals, correlated copies, errors from trusted sources, genuine low-trust corrections, self-corrections, explicit retraction of reports and of sources, an attacker) and a declared stratified query selection; (3) \pal, a write-time store with versioned keys and pinned derived justifications, and the measurement that retraction propagation through justifications---not ordinary belief updating---is what prevents downstream errors; (4) an evidence model with a defined meaning of support, evaluated for calibration on held-out streams against learned baselines, with an honest negative result; (5) the Setting 2 result: under automatically extracted dependencies, write-time justification maintenance beats LLM query-time adjudication on warranted retraction consequences by a wide margin at lower cost, and the regime in which it stops paying (extraction error rates of tens of percent) is measured. Retraction propagation as a \emph{mechanism} is not new: MemTX \citep{memtx2026} cascades typed repair through derived records in transactional multi-agent memory, and CUPMem \citep{stale2026} invalidates dependent attributes at write time; our claim is about when it is warranted, what it costs, and how to measure it without rewarding premature commitment.
+
+\section{Related work}
+\paragraph{Belief revision and truth maintenance.} AGM revision \citep{agm1985} and belief-base postulates \citep{hansson1999} define rational change of a theory; Katsuno and Mendelzon \citep{km1991} distinguish \emph{update} (the world changed) from \emph{revision} (we were wrong), a distinction our operator cues make observable. Justification- and assumption-based truth maintenance \citep{doyle1979,dekleer1986} maintain which conclusions remain supported when premises are withdrawn; our oracle is an ATMS over environments of accepted reports, and \pal{} is a JTMS-like store with versioning. Non-prioritised revision \citep{hansson1997,makinson1997} allows input to be rejected; our admission policy is non-prioritised in that reliability never resolves disputes at the oracle level.
+\paragraph{Temporal and bitemporal memory.} Bitemporal databases \citep{snodgrass} separate valid time from transaction (belief) time; Kumiho \citep{kumiho2026} and TOKI \citep{toki2026} bring versioned revisions and bitemporal operators to agent memory, Zep/Graphiti \citep{graphiti2025} build temporal knowledge graphs. None evaluates retraction propagation under extracted dependencies against query-time adjudication.
+\paragraph{Benchmarks.} STALE \citep{stale2026}, LongMemEval \citep{longmemeval}, LoCoMo and StateMemBench test memory updates and state tracking against ground truth; \rs{} differs in scoring against justified belief with hidden world state, delayed and unreliable observations, and evidence withdrawal.
+\paragraph{Calibration and source reliability.} Nous \citep{nous2026a,nous2026b} studies reliability-conditioned updating and shows that learning useful state decisions can need quadratically fewer records than calibrating sources; we take from it the choice of decision-relevant metrics (risk--coverage) alongside Brier and ECE, and class-level rather than per-source priors.
+
+\section{Semantics of justified belief}\label{sec:semantics}
+\input{sections/semantics}
+
+\section{The output contract}\label{sec:contract}
+\input{sections/contract}
+
+\section{\rs}\label{sec:benchmark}
+\input{sections/benchmark}
+
+\section{Systems}\label{sec:systems}
+\input{sections/systems}
+
+\section{Experimental protocol and pre-registration}\label{sec:protocol}
+\input{sections/protocol}
+
+\section{Results}\label{sec:results}
+\input{sections/results}
+
+\section{Threats to validity}\label{sec:threats}
+\input{sections/threats}
+
+\section{Conclusion}
+\input{sections/conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}
