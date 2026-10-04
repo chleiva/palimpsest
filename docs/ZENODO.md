@@ -9,10 +9,10 @@
 - Resource type: Publication → Working paper
 - Title: PALIMPSEST: Evaluating Retraction and Uncertainty in LLM Memory
 - Publication date: 2026-10-03
-- Authors/Creators: Leiva Beltrán, Christian — affiliation: Independent researcher (or your organisation) — ORCID if you have one
+- Authors/Creators: Leiva Beltran, Christian — affiliation: Independent researcher (or your organisation) — ORCID if you have one
 - Description: see below (paste as is; Zenodo accepts basic HTML/plain text)
 - Licenses: Creative Commons Attribution 4.0 International (matches page 1 of the PDF and LICENSE in the zip)
-- Copyright: © 2026 Christian Leiva Beltrán
+- Copyright: © 2026 Christian Leiva Beltran
 
 ## Recommended information
 - Contributors: (leave empty; AI assistance is disclosed in the paper's author note, not as a contributor)

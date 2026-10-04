@@ -3,14 +3,14 @@ message: "If you use this software, the benchmark or the paper, please cite it a
 type: software
 title: "PALIMPSEST: Evaluating Retraction and Uncertainty in LLM Memory"
 authors:
-  - family-names: "Leiva Beltrán"
+  - family-names: "Leiva Beltran"
     given-names: "Christian"
     email: "chris@chrisgenai.com"
 version: "1.0"
 date-released: "2026-10-03"
 doi: "10.5281/zenodo.23127764"
 license: MIT
-repository-code: "https://github.com/chleiva/palimpsest"
+repository-code: "https://github.com/OWNER/palimpsest"
 keywords:
   - belief revision
   - truth maintenance
@@ -26,7 +26,7 @@ preferred-citation:
   type: report
   title: "PALIMPSEST: Evaluating Retraction and Uncertainty in LLM Memory"
   authors:
-    - family-names: "Leiva Beltrán"
+    - family-names: "Leiva Beltran"
       given-names: "Christian"
   year: 2026
   month: 10

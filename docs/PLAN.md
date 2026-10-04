@@ -1,6 +1,6 @@
 # PALIMPSEST — Research Execution Plan v0.3
 
-Prepared 2 Oct 2026 (v0.3: ambiguity rule frozen, ATMS oracle, ambiguity endpoints, abstain/commit references, shared output contract §3.4) against the one-page proposal "PALIMPSEST: Accountable Belief Revision for LLM Systems" (C. Leiva Beltrán, 2 Oct 2026). Constraints: total spend ≤ $100 (LLM + everything else); API access to Anthropic, OpenAI and AWS; MacBook M3 16 GB used only for deterministic code, never for local LLM inference; target is an arXiv preprint with no fixed deadline, written to survive later peer review.
+Prepared 2 Oct 2026 (v0.3: ambiguity rule frozen, ATMS oracle, ambiguity endpoints, abstain/commit references, shared output contract §3.4) against the one-page proposal "PALIMPSEST: Accountable Belief Revision for LLM Systems" (C. Leiva Beltran, 2 Oct 2026). Constraints: total spend ≤ $100 (LLM + everything else); API access to Anthropic, OpenAI and AWS; MacBook M3 16 GB used only for deterministic code, never for local LLM inference; target is an arXiv preprint with no fixed deadline, written to survive later peer review.
 
 ## 1. Critical reading of the proposal
 

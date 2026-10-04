@@ -11,8 +11,8 @@
 
 \title{\pal: Evaluating Retraction and Uncertainty in LLM Memory\\
 \large Justified belief under evidence withdrawal: the same answers as replay at lower measured latency, and the measured price of not assuming recency}
-\author{Christian Leiva Beltr\'an\\ \small \texttt{chris@chrisgenai.com}\thanks{Research design, semantics, code and experiments were developed with AI assistance (Claude); the author directed the work, reviewed every result and takes responsibility for the content. Artifact statement: Appendix~\ref{app:artifacts}.}}
-\date{3 October 2026 --- preprint, v0.4 draft}
+\author{Christian Leiva Beltran\\ \small \texttt{chris@chrisgenai.com}\thanks{Research design, semantics, code and experiments were developed with AI assistance (Claude); the author directed the work, reviewed every result and takes responsibility for the content. Artifact statement: Appendix~\ref{app:artifacts}.}}
+\date{3 October 2026 --- working paper, not peer reviewed, v1.0 \\ \small DOI: \href{https://doi.org/10.5281/zenodo.23127764}{10.5281/zenodo.23127764} \quad Licence: CC BY 4.0}
 
 \begin{document}
 \maketitle
@@ -97,5 +97,5 @@ Rule-coded categories over the 4{,}062 primary answers (non-companion, non-\text
 \input{appendix/chronology}
 
 \section{Artifact statement}\label{app:artifacts}
-The code (semantics and both oracles, generator, store, baselines, scoring, pipelines), the frozen evaluation sets with gold and hidden labels, the Setting 3 fetch script and revision ids, every prompt before and after the amendment, every raw model output and batch record, the cost ledger, the pre-registration with its dated deviations, and the scripts that regenerate every table and figure from cached outputs without an API call (\texttt{scripts/make\_tables.py}, \texttt{scripts/make\_figures.py}) will be released as a versioned archive on Zenodo (the DOI is reserved at deposit and inserted here before public release; until then the complete package is available from the author on request, and no claim of public availability is made); the LongMemEval file is the \texttt{longmemeval-cleaned} release of 3 October 2026. Model identifiers: \texttt{claude-haiku-4-5-20251001} for every stage and \texttt{claude-sonnet-4-6} for the sign-stability subset, all through the Message Batches API between 3 October 2026 00:00 and 22:00 UTC. Total measured spend \$\spendTotal.
+The code (semantics and both oracles, generator, store, baselines, scoring, pipelines), the frozen evaluation sets with gold and hidden labels, the Setting 3 fetch script and revision ids, every prompt before and after the amendment, every raw model output and batch record, the cost ledger, the pre-registration with its dated deviations, and the scripts that regenerate every table and figure from cached outputs without an API call (\texttt{scripts/make\_tables.py}, \texttt{scripts/make\_figures.py}) are deposited with this paper as a versioned archive on Zenodo, DOI \href{https://doi.org/10.5281/zenodo.23127764}{10.5281/zenodo.23127764} (\texttt{palimpsest-v1.0.zip} with a SHA-256 manifest; the third-party LongMemEval file is not redistributed and is identified by its source release); the LongMemEval file is the \texttt{longmemeval-cleaned} release of 3 October 2026. Model identifiers: \texttt{claude-haiku-4-5-20251001} for every stage and \texttt{claude-sonnet-4-6} for the sign-stability subset, all through the Message Batches API between 3 October 2026 00:00 and 22:00 UTC. Total measured spend \$\spendTotal.
 \end{document}
