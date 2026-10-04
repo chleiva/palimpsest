@@ -9,7 +9,7 @@ import hashlib, io, os, sys, urllib.request, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 URL = "https://zenodo.org/records/23127764/files/palimpsest-v1.0.zip?download=1"
-SHA256 = "686cf0bbf43f2cf7177aa84abaf5e27397b9543ae5363854545b26bcbf077dc6"
+SHA256 = "4c0fc8106b00a54c2f5990df72e90af006671611ca0a53f8a06609e5d961cdb6"
 PREFIX = "palimpsest-v1.0/"
 TAKE = ("data/", "bridge/")           # only the cached data; code and paper come from git
 

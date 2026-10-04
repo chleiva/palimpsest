@@ -2,7 +2,7 @@
 
 ## Files (upload both)
 - `PALIMPSEST_v1.0.pdf` — in ~/palimpsest (34 pages; DOI and licence printed on page 1)
-- `palimpsest-v1.0.zip` — in ~/palimpsest (37,393,652 bytes; SHA-256 686cf0bbf43f2cf7177aa84abaf5e27397b9543ae5363854545b26bcbf077dc6; 8,944 files; manifest inside)
+- `palimpsest-v1.0.zip` — in ~/palimpsest (37,393,652 bytes; SHA-256 4c0fc8106b00a54c2f5990df72e90af006671611ca0a53f8a06609e5d961cdb6; 8,944 files; manifest inside)
 
 ## Basic information
 - Digital Object Identifier: 10.5281/zenodo.23127764 (already reserved — leave as is)
