@@ -2,7 +2,7 @@
 
 ## Files (upload both)
 - `PALIMPSEST_v1.0.pdf` — in ~/palimpsest (34 pages; DOI and licence printed on page 1)
-- `palimpsest-v1.0.zip` — in ~/palimpsest (37,393,652 bytes; SHA-256 4c0fc8106b00a54c2f5990df72e90af006671611ca0a53f8a06609e5d961cdb6; 8,944 files; manifest inside)
+- `palimpsest-v1.0.zip` — in ~/palimpsest (37,393,652 bytes; SHA-256 686cf0bbf43f2cf7177aa84abaf5e27397b9543ae5363854545b26bcbf077dc6; 8,944 files; manifest inside)
 
 ## Basic information
 - Digital Object Identifier: 10.5281/zenodo.23127764 (already reserved — leave as is)
@@ -52,3 +52,6 @@ LLM memories built as retrieval over an append-only store fail when the evidence
 The deposit package (palimpsest-v1.0.zip, SHA-256 686cf0bb…77dc6) contains the code (semantics and both oracles, generator, store, baselines, scoring, natural-language pipeline), the frozen evaluation sets with gold and hidden labels, every prompt (original and amended output contract), every raw model output and batch record, the cost ledger (total measured spend $88.85), the pre-registration with its dated deviations and outcomes, the Wikidata revision contents used for Setting 3 (CC0), and the scripts that regenerate every table and figure from cached outputs without an API call (README_DEPOSIT.md). The LongMemEval dataset is not redistributed; it is identified by its source release. Research design, semantics, code and experiments were developed with AI assistance (Claude); the author directed the work, reviewed every result and takes responsibility for the content.
 
 Model identifiers: claude-haiku-4-5-20251001 (all stages) and claude-sonnet-4-6 (15-stream sign-stability subset), Anthropic Message Batches API, 3 October 2026.
+
+## Note (4 Oct 2026)
+The published v1.0 files on Zenodo carry the author surname with an accent ("Beltrán") in the PDF byline and inside the zip; the author uses "Beltran" and the repository, record metadata and all later versions use that spelling. No new Zenodo version was made for this change; it will be folded into the next substantive version.
